@@ -22,10 +22,12 @@ const IndexPage = () => (
           }}
           md={true}
         >
-          <h1>Hi people</h1>
+          <h1>About</h1>
           <p>
-            I'm August, a (mainly) front developer with emphasis on the web.
-            Feel free to explore this site to see some stuff I have done.
+            While mainly focused on the web, I also enjoy developing mobile
+            applications in React Native. In my spare time I like to spend my
+            time on other creative hobbies, such as producing music and playing
+            the guitar.
           </p>
           <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
         </Col>
