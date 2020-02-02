@@ -1,14 +1,22 @@
-import React from 'react';
-import Layout from '../components/layout';
-import Image from '../components/image';
-import SEO from '../components/seo';
-
-import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Skill from '../components/skill';
+
+const skills = [
+  { name: 'html', value: 50 },
+  { name: 'css', value: 90 },
+];
+
+const listItems = skills.map((skill, index) => (
+  <Skill key={index} skill={skill} />
+));
 
 const IndexPage = () => (
   <Layout>
-    <SEO title='Home' />
+    <SEO title='Skills' />
     <Container
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >
@@ -22,16 +30,15 @@ const IndexPage = () => (
           }}
           md={true}
         >
-          <h1>Hi people</h1>
+          <h1>Skills</h1>
           <p>
-            I'm August, a (mainly) front developer with emphasis on the web.
-            Feel free to explore this site to see some stuff I have done.
+            These are some of the skills I have, ranging from high to low. Some
+            of them I work with professionally, while others come from hobbies
+            and other interests.
           </p>
           <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
         </Col>
-        <Col md={true}>
-          <Image />
-        </Col>
+        <Col md={true}>{listItems}</Col>
       </Row>
     </Container>
   </Layout>
