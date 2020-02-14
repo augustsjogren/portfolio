@@ -57,7 +57,7 @@ const Header = ({ siteTitle }) => (
           Skills
         </Link>
         <Link
-          to='/'
+          to='/contact'
           style={{
             color: 'black',
             display: 'flex',

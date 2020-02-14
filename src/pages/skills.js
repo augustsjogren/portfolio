@@ -6,15 +6,18 @@ import SEO from '../components/seo';
 import Skill from '../components/skill';
 
 const skills = [
-  { name: 'html', value: 50 },
-  { name: 'css', value: 90 },
+  { name: 'Html', value: 80 },
+  { name: 'Css', value: 90 },
+  { name: 'Javascript', value: 70 },
+  { name: 'C#', value: 70 },
+  { name: '.NET', value: 70 },
 ];
 
 const listItems = skills.map((skill, index) => (
-  <Skill key={index} skill={skill} />
+  <Skill key={index} index={index} skill={skill} />
 ));
 
-const IndexPage = () => (
+const SkillsPage = () => (
   <Layout>
     <SEO title='Skills' />
     <Container
@@ -44,4 +47,4 @@ const IndexPage = () => (
   </Layout>
 );
 
-export default IndexPage;
+export default SkillsPage;
