@@ -5,7 +5,7 @@ function Skill(props) {
   function getRowColor() {
     console.log(props.index);
 
-    if (props.index == 0 || props.index % 2 == 0) {
+    if (props.index === 0 || props.index % 2 === 0) {
       return 'none';
     }
     return '#f3f3f3';

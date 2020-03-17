@@ -37,13 +37,27 @@ const ContactPage = () => (
                 <a
                   href='https://www.linkedin.com/in/august-sjogren/'
                   target='_blank'
+                  rel='noopener noreferrer'
                 >
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href='https://github.com/augustsjogren' target='_blank'>
+                <a
+                  href='https://github.com/augustsjogren'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href='mailto:contact@augustsjogren.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Email
                 </a>
               </li>
             </ul>
