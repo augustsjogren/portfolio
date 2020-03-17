@@ -2,6 +2,12 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import '../styles/header.scss';
+
+const headerActiveStyle = {
+  textDecoration: 'underline',
+  textUnderlinePosition: 'under',
+};
 
 const Header = ({ siteTitle }) => (
   <header
@@ -25,45 +31,29 @@ const Header = ({ siteTitle }) => (
       <Nav className='ml-auto'>
         <Link
           to='/'
-          style={{
-            color: 'black',
-            display: 'flex',
-            alignItems: 'center',
-            padding: '10px',
-          }}
+          className='header-link'
+          activeStyle={headerActiveStyle}
         >
           Explore
         </Link>
         <Link
           to='/about'
-          style={{
-            color: 'black',
-            display: 'flex',
-            alignItems: 'center',
-            padding: '10px',
-          }}
+          className='header-link'
+          activeStyle={headerActiveStyle}
         >
           About
         </Link>
         <Link
           to='/skills'
-          style={{
-            color: 'black',
-            display: 'flex',
-            alignItems: 'center',
-            padding: '10px',
-          }}
+          activeStyle={headerActiveStyle}
+          className='header-link'
         >
           Skills
         </Link>
         <Link
           to='/contact'
-          style={{
-            color: 'black',
-            display: 'flex',
-            alignItems: 'center',
-            padding: '10px',
-          }}
+          activeStyle={headerActiveStyle}
+          className='header-link'
         >
           Contact
         </Link>
