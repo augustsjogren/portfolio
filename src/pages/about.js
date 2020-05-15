@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
+import { BsCodeSlash, BsMusicNoteBeamed } from 'react-icons/bs';
+import { RiRunLine } from 'react-icons/ri';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,7 +10,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const AboutPage = () => (
   <Layout>
     <SEO title='Home' />
-    <Container fluid='xl'
+    <Container
+      fluid='xl'
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >
       <Row style={{ flex: '1 auto' }}>
@@ -31,7 +33,17 @@ const AboutPage = () => (
           </p>
         </Col>
         <Col md={true} className='mx-4'>
-          <Image />
+          <Row className='align-items-center h-100 mt-5 mt-md-0 row'>
+            <Col className='text-center'>
+              <BsCodeSlash size='32' color='black' />
+            </Col>
+            <Col className='text-center'>
+              <BsMusicNoteBeamed size='32' color='black' />
+            </Col>
+            <Col className='text-center'>
+              <RiRunLine size='32' color='black' />
+            </Col>
+          </Row>
         </Col>
       </Row>
     </Container>

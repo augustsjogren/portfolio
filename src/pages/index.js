@@ -9,7 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const IndexPage = () => (
   <Layout>
     <SEO title='Home' />
-    <Container fluid='xl'
+    <Container
+      fluid='xl'
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >
       <Row style={{ flex: '1 auto' }}>
