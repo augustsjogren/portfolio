@@ -20,7 +20,8 @@ const listItems = skills.map((skill, index) => (
 const SkillsPage = () => (
   <Layout>
     <SEO title='Skills' />
-    <Container fluid='xl'
+    <Container
+      fluid='xl'
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >
       <Row style={{ flex: '1 auto' }}>
@@ -31,7 +32,6 @@ const SkillsPage = () => (
             justifyContent: 'center',
           }}
           md={true}
-          className='mx-4'
         >
           <h1>Skills</h1>
           <p>
@@ -40,7 +40,9 @@ const SkillsPage = () => (
             and other interests.
           </p>
         </Col>
-        <Col md={true} className='mx-4'>{listItems}</Col>
+        <Col md={true} className='mx-4 mt-4 mt-md-0'>
+          {listItems}
+        </Col>
       </Row>
     </Container>
   </Layout>
