@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
@@ -10,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const ContactPage = () => (
   <Layout>
     <SEO title='Contact' />
-    <Container
+    <Container fluid='xl'
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >
       <Row style={{ flex: '1 auto' }}>
@@ -19,19 +18,17 @@ const ContactPage = () => (
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            padding: '40px',
           }}
           md={true}
+          className='mx-4'
         >
           <h1>Contact</h1>
           <p>Feel free to contact me using any of the ways listed below.</p>
 
         </Col>
-        <Col md={true}>
+        <Col md={true} className='mx-4'>
           <div
             style={{
-              maxWidth: `300px`,
-              marginBottom: `1.45rem`,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center'

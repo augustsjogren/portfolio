@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const AboutPage = () => (
   <Layout>
     <SEO title='Home' />
-    <Container
+    <Container fluid='xl'
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >
       <Row style={{ flex: '1 auto' }}>
@@ -18,9 +18,9 @@ const AboutPage = () => (
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            padding: '40px',
           }}
           md={true}
+          className='mx-4'
         >
           <h1>About</h1>
           <p>
@@ -29,9 +29,8 @@ const AboutPage = () => (
             time on other creative hobbies, such as producing music and playing
             the guitar.
           </p>
-          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
         </Col>
-        <Col md={true}>
+        <Col md={true} className='mx-4'>
           <Image />
         </Col>
       </Row>

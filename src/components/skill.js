@@ -20,7 +20,9 @@ function Skill(props) {
         backgroundColor: getRowColor(),
       }}
     >
-      <Col md={4} style={{ borderRight: '1px solid #c2c2c2' }}>
+      <Col
+        xs={3}
+        style={{ borderRight: '1px solid #c2c2c2' }}>
         <div
           style={{
             textAlign: 'right',
