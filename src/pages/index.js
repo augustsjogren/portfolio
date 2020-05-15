@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const IndexPage = () => (
   <Layout>
     <SEO title='Home' />
-    <Container
+    <Container fluid='xl'
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >
       <Row style={{ flex: '1 auto' }}>
@@ -18,18 +18,17 @@ const IndexPage = () => (
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            padding: '40px',
           }}
           md={true}
+          className='mx-4'
         >
           <h1>Hi people</h1>
           <p>
             I'm August, a (mainly) front developer with emphasis on the web.
             Feel free to explore this site to see some stuff I have done.
           </p>
-          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
         </Col>
-        <Col md={true}>
+        <Col md={true} className='mx-4'>
           <Image />
         </Col>
       </Row>

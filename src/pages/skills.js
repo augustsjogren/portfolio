@@ -20,7 +20,7 @@ const listItems = skills.map((skill, index) => (
 const SkillsPage = () => (
   <Layout>
     <SEO title='Skills' />
-    <Container
+    <Container fluid='xl'
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >
       <Row style={{ flex: '1 auto' }}>
@@ -29,9 +29,9 @@ const SkillsPage = () => (
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            padding: '40px',
           }}
           md={true}
+          className='mx-4'
         >
           <h1>Skills</h1>
           <p>
@@ -39,9 +39,8 @@ const SkillsPage = () => (
             of them I work with professionally, while others come from hobbies
             and other interests.
           </p>
-          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
         </Col>
-        <Col md={true}>{listItems}</Col>
+        <Col md={true} className='mx-4'>{listItems}</Col>
       </Row>
     </Container>
   </Layout>

@@ -26,7 +26,10 @@ const Image = () => {
     }
   `);
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{
+    top: '50%',
+    transform: 'translateY(-50%)',
+  }} />;
 };
 
 export default Image;
