@@ -27,9 +27,9 @@ const AboutPage = () => (
           <h1>About</h1>
           <p>
             While mainly focused on the web, I also enjoy developing mobile
-            applications in React Native. In my spare time I like to spend my
+            applications in React Native. Outside of work I like to spend my
             time on other creative hobbies, such as producing music and playing
-            the guitar.
+            the guitar. Excercise is also an important part of my everyday life.
           </p>
         </Col>
         <Col md={true} className='mx-4'>
