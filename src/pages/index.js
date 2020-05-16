@@ -25,8 +25,10 @@ const IndexPage = () => (
         >
           <h1>Hi people</h1>
           <p>
-            I'm August, a (mainly) front developer with emphasis on the web.
-            Feel free to explore this site to see some stuff I have done.
+            I'm August, a software developer based in Linköping, Sweden. My main
+            area as a developer is the web, but I also have some knowledge about
+            mobile apps and .NET. Feel free to explore this site to get to know
+            me better!
           </p>
         </Col>
         <Col md={true} className='mx-4'>

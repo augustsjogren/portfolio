@@ -6,11 +6,13 @@ import SEO from '../components/seo';
 import Skill from '../components/skill';
 
 const skills = [
-  { name: 'Html', value: 80 },
-  { name: 'Css', value: 90 },
-  { name: 'Javascript', value: 70 },
-  { name: 'C#', value: 70 },
-  { name: '.NET', value: 70 },
+  { name: 'HTML', value: 50 },
+  { name: 'CSS', value: 60 },
+  { name: 'JavaScript', value: 70 },
+  { name: 'React', value: 60 },
+  { name: 'React Native', value: 60 },
+  { name: 'Blazor', value: 50 },
+  { name: '.NET', value: 50 },
 ];
 
 const listItems = skills.map((skill, index) => (
@@ -35,9 +37,10 @@ const SkillsPage = () => (
         >
           <h1>Skills</h1>
           <p>
-            These are some of the skills I have, ranging from high to low. Some
-            of them I work with professionally, while others come from hobbies
-            and other interests.
+            These are some of my most prominent skills, ranging from high to
+            low. Some of them I work with professionally, while others are used
+            in hobbies and side projects. My skillset is constantly developing,
+            as I enjoy trying out new technologies and tools.
           </p>
         </Col>
         <Col md={true} className='mx-4 mt-4 mt-md-0'>
