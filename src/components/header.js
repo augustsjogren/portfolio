@@ -22,18 +22,15 @@ const Header = ({ siteTitle }) => (
           style={{
             color: 'black',
             textDecoration: 'none',
+            // fontSize: '1rem'
           }}
         >
-          {siteTitle}
+          AS
         </Link>
       </Navbar.Brand>
 
       <Nav className='ml-auto'>
-        <Link
-          to='/'
-          className='header-link'
-          activeStyle={headerActiveStyle}
-        >
+        <Link to='/' className='header-link' activeStyle={headerActiveStyle}>
           Explore
         </Link>
         <Link

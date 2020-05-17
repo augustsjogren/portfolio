@@ -23,7 +23,7 @@ const IndexPage = () => (
           md={true}
           className='mx-4'
         >
-          <h1>Hi people</h1>
+          <h1>Hi!</h1>
           <p>
             I'm August, a software developer based in Linköping, Sweden. My main
             area as a developer is the web, but I also have some knowledge about
