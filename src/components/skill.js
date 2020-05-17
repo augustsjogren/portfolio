@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import styled, { keyframes } from 'styled-components';
 
 function Skill(props) {
   function getRowColor() {
@@ -10,6 +11,19 @@ function Skill(props) {
     }
     return '#f3f3f3';
   }
+
+  var growSkill = keyframes`
+    from { width: 10px; }
+    to { width: 100%; }
+  `;
+
+  const SkillBar = styled.div`
+    background-color: #ff8900;
+    height: 10px;
+    animation: ${growSkill} 1.5s linear 0.3s;
+    animation-fill-mode: backwards;
+    border-radius: 40px;
+  `;
 
   return (
     <Row
@@ -31,17 +45,12 @@ function Skill(props) {
           <span> {props.skill.name} </span>
         </div>
       </Col>
-      <Col className='skill-bar-container' style={{ height: '100%' }}>
+      <Col>
         <div
-          className='skill-bar'
-          style={{
-            width: props.skill.value + '%',
-            backgroundColor: '#FF8900',
-            height: '10px',
-            borderRadius: '40px',
-          }}
+          className='skill-bar-container'
+          style={{ height: '100%', width: props.skill.value + '%' }}
         >
-          {' '}
+          <SkillBar value={props.skill.value} />
         </div>
       </Col>
     </Row>
