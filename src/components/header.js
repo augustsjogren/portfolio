@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => (
 
       <Nav className='ml-auto'>
         <Link to='/' className='header-link' activeStyle={headerActiveStyle}>
-          Explore
+          Home
         </Link>
         <Link
           to='/about'
