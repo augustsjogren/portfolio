@@ -7,9 +7,9 @@ import Skill from '../components/skill';
 
 const skills = [
   { name: 'HTML', value: 50 },
-  { name: 'CSS', value: 60 },
+  { name: 'CSS', value: 75 },
   { name: 'JavaScript', value: 70 },
-  { name: 'React', value: 60 },
+  { name: 'React', value: 70 },
   { name: 'React Native', value: 60 },
   { name: 'Blazor', value: 50 },
   { name: '.NET', value: 50 },
