@@ -7,6 +7,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from 'react-icons/fa';
+import { GiMailbox } from 'react-icons/gi';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,52 +31,12 @@ const ContactPage = () => (
         >
           <h1>Contact</h1>
           <p>
-            Want to get in touch? Feel free to shoot me an email or contact me
+            Want to get in touch? Feel free to send me an email or contact me
             using any of the other ways listed!
           </p>
-        </Col>
-        <Col md={true} className='mx-4 mt-4 mt-md-0'>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          >
-            <ul style={{ listStyleType: 'none', width: 'fit-content' }}>
-              <li>
-                <a
-                  href='https://www.linkedin.com/in/august-sjogren/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <div className='d-flex flex-row align-items-center'>
-                    <FaLinkedin
-                      color='black'
-                      size='32px'
-                      style={{ marginRight: '15px' }}
-                    />
-                    <span>LinkedIn</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href='https://github.com/augustsjogren'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <div className='d-flex flex-row align-items-center'>
-                    <FaGithub
-                      color='black'
-                      size='32px'
-                      style={{ marginRight: '15px' }}
-                    />
-                    <span>GitHub</span>
-                  </div>
-                </a>
-              </li>
-              <li>
+          <div>
+            <Row className='mt-2'>
+              <Col md className='my-md-0 my-2'>
                 <a
                   href='mailto:contact@augustsjogren.com'
                   target='_blank'
@@ -90,24 +51,54 @@ const ContactPage = () => (
                     <span>Email</span>
                   </div>
                 </a>
-              </li>
-              <li>
+              </Col>
+              <Col md className='my-md-0 my-2'>
                 <a
-                  href='https://www.google.se/maps/place/Link%C3%B6ping/@58.4191103,15.419861,9.81z/data=!4m5!3m4!1s0x46596e719a049f95:0x400fef341e48e70!8m2!3d58.410807!4d15.6213727'
+                  href='https://www.linkedin.com/in/august-sjogren/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   <div className='d-flex flex-row align-items-center'>
-                    <FaMapMarkerAlt
+                    <FaLinkedin
                       color='black'
                       size='32px'
                       style={{ marginRight: '15px' }}
                     />
-                    <span>Linköping, SE</span>
+                    <span>LinkedIn</span>
                   </div>
                 </a>
-              </li>
-            </ul>
+              </Col>
+              <Col md className='my-md-0 my-2'>
+                <a
+                  href='https://github.com/augustsjogren'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <div className='d-flex flex-row align-items-center'>
+                    <FaGithub
+                      color='black'
+                      size='32px'
+                      style={{ marginRight: '15px' }}
+                    />
+                    <span>GitHub</span>
+                  </div>
+                </a>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+        <Col
+          md={true}
+          className=' d-flex justify-content-center align-items-center mx-4 mt-4 mt-md-0'
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <GiMailbox size={128} />
           </div>
         </Col>
       </Row>
