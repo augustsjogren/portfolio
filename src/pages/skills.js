@@ -39,8 +39,7 @@ const SkillsPage = () => (
           <h1>Skills</h1>
           <p>
             These are some of my most prominent skills, ranging from high to
-            low. Some of them I work with professionally, while others are used
-            in hobbies and side projects. My skillset is constantly developing,
+            low. However, my skillset is constantly developing
             as I enjoy trying out new technologies and tools.
           </p>
         </Col>

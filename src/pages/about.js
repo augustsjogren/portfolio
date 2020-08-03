@@ -26,10 +26,13 @@ const AboutPage = () => (
         >
           <h1>About</h1>
           <p>
-            While mainly focused on the web, I also enjoy developing mobile
-            applications in React Native. Outside of work I like to spend my
-            time on other creative hobbies, such as producing music and playing
-            the guitar. Excercise is also an important part of my everyday life.
+            As a developer I'm mainly focused on the web, where I gravitate
+            towards front end. I also enjoy developing mobile applications in
+            React Native, where I can utilize my web development skills. Outside
+            of work I like to spend my time on other creative hobbies, such as
+            producing music or fiddling with some new cool tech. Excercise is
+            also an important part of my everyday life, and I like to try out
+            new activities and sports.
           </p>
         </Col>
         <Col md={true} className='mx-4'>
