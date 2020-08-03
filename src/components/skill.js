@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 function Skill(props) {
   function getRowColor() {
@@ -12,16 +12,9 @@ function Skill(props) {
     return '#f3f3f3';
   }
 
-  var growSkill = keyframes`
-    from { width: 10px; }
-    to { width: 100%; }
-  `;
-
   const SkillBar = styled.div`
     background-color: #ff8900;
     height: 10px;
-    animation: ${growSkill} 1.5s linear 0.3s;
-    animation-fill-mode: backwards;
     border-radius: 40px;
   `;
 
