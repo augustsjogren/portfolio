@@ -3,21 +3,20 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Skill from '../components/skill';
+import SkillTag from '../components/skillTag';
 
 const skills = [
-  { name: 'HTML', value: 50 },
-  { name: 'CSS', value: 75 },
-  { name: 'JavaScript', value: 70 },
-  { name: 'React', value: 70 },
-  { name: 'React Native', value: 60 },
-  { name: 'Blazor', value: 50 },
-  { name: '.NET', value: 50 },
+  'React.js',
+  'React Native',
+  'Blazor',
+  'JavaScript',
+  'HTML',
+  'CSS',
+  '.NET',
+  'SQL Server',
 ];
 
-const listItems = skills.map((skill, index) => (
-  <Skill key={index} index={index} skill={skill} />
-));
+const skillsList = skills.map((skill, index) => <SkillTag content={skill} />);
 
 const SkillsPage = () => (
   <Layout>
@@ -39,12 +38,15 @@ const SkillsPage = () => (
           <h1>Skills</h1>
           <p>
             These are some of my most prominent skills, ranging from high to
-            low. However, my skillset is constantly developing
-            as I enjoy trying out new technologies and tools.
+            low. However, my skillset is constantly developing as I enjoy trying
+            out new technologies and tools.
           </p>
         </Col>
-        <Col md={true} className='mx-4 mt-4 mt-md-0'>
-          {listItems}
+        <Col
+          md={true}
+          className='d-flex mx-4 mt-4 mt-md-0 text-center align-items-center'
+        >
+          <div>{skillsList}</div>
         </Col>
       </Row>
     </Container>

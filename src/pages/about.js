@@ -27,7 +27,7 @@ const AboutPage = () => (
           <h1>About</h1>
           <p>
             As a developer I'm mainly focused on the web, where I gravitate
-            towards front end. I also enjoy developing mobile applications in
+            towards front end. I also enjoy creating mobile applications in
             React Native, where I can utilize my web development skills. Outside
             of work I like to spend my time on other creative hobbies, such as
             producing music or fiddling with some new cool tech. Excercise is
