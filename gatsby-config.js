@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `augustsjogren.com`,
-    description: `Personal website of August Sjögren, software developer focused on the web.`,
-    author: `@gatsbyjs`,
+    description: `Personal website of August Sjögren, software developer.`,
+    author: `August Sjögren`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,6 +31,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
   ],
 };
