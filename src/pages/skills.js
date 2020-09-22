@@ -3,7 +3,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import SkillTag from '../components/SkillTag';
+import SkillTag from '../components/skillTag';
 
 const skills = [
   'React.js',
