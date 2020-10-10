@@ -1,23 +1,20 @@
-import React from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import {
-  FaLinkedin,
-  FaGithub,
-  FaEnvelope,
-  FaMapMarkerAlt,
-} from 'react-icons/fa';
-
-import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { Col, Row } from 'react-bootstrap';
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaMapMarkerAlt
+} from 'react-icons/fa';
+import Layout from '../components/layout';
+import MainContainer from '../components/layout/mainContainer';
+import SEO from '../components/seo';
 
 const ContactPage = () => (
   <Layout>
     <SEO title='Contact' />
-    <Container
-      fluid='xl'
-      style={{ height: '100%', display: 'flex', alignItems: 'center' }}
-    >
+    <MainContainer>
       <Row style={{ flex: '1 auto' }}>
         <Col
           style={{
@@ -101,7 +98,7 @@ const ContactPage = () => (
           </Row>
         </Col>
       </Row>
-    </Container>
+    </MainContainer>
   </Layout>
 );
 
