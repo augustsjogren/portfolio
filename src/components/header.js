@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import '../styles/header.scss';
@@ -9,7 +8,7 @@ const headerActiveStyle = {
   textUnderlinePosition: 'under',
 };
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header
     style={{
       background: `white`,
@@ -22,7 +21,6 @@ const Header = ({ siteTitle }) => (
           style={{
             color: 'black',
             textDecoration: 'none',
-            // fontSize: '1rem'
           }}
         >
           AS
@@ -58,13 +56,5 @@ const Header = ({ siteTitle }) => (
     </Navbar>
   </header>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
-};
 
 export default Header;

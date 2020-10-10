@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import Layout from '../components/layout';
+import MainContainer from '../components/layout/mainContainer';
 import SEO from '../components/seo';
 import SkillTag from '../components/skillTag';
 
@@ -21,10 +22,7 @@ const skillsList = skills.map((skill, index) => <SkillTag content={skill} />);
 const SkillsPage = () => (
   <Layout>
     <SEO title='Skills' />
-    <Container
-      fluid='xl'
-      style={{ height: '100%', display: 'flex', alignItems: 'center' }}
-    >
+    <MainContainer>
       <Row style={{ flex: '1 auto' }}>
         <Col
           style={{
@@ -49,7 +47,7 @@ const SkillsPage = () => (
           <div>{skillsList}</div>
         </Col>
       </Row>
-    </Container>
+    </MainContainer>
   </Layout>
 );
 
