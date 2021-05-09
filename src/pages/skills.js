@@ -1,10 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import Layout from '../components/layout';
 import MainContainer from '../components/layout/mainContainer';
 import SEO from '../components/seo';
 import SkillTag from '../components/skillTag';
+import '../styles/skills.scss';
 
 const skills = [
   'React.js',
@@ -23,30 +22,21 @@ const SkillsPage = () => (
   <Layout>
     <SEO title='Skills' />
     <MainContainer>
-      <Row style={{ flex: '1 auto' }}>
-        <Col
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-          md={true}
-          className='mx-4'
-        >
+      <div className='row-md'>
+        <div className='col'>
           <h1>Skills</h1>
           <p>
             These are some of my most prominent skills, ranging from high to
             low. However, my skillset is constantly developing as I enjoy trying
             out new technologies and tools.
           </p>
-        </Col>
-        <Col
-          md={true}
-          className='d-flex mx-4 mt-4 mt-md-0 text-center align-items-center'
-        >
-          <div>{skillsList}</div>
-        </Col>
-      </Row>
+        </div>
+        <div className='col'>
+          <div className='flex center skill-list'>
+            <div>{skillsList}</div>
+          </div>
+        </div>
+      </div>
     </MainContainer>
   </Layout>
 );

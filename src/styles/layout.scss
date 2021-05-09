@@ -1,0 +1,57 @@
+$bp-medium: 768px;
+
+/*--- Grid ---*/
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  &-md {
+    @extend .row;
+    @media (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+  }
+}
+
+.col {
+  display: block;
+  padding: .5rem;
+}
+
+/*--- Positioning ---*/
+
+.flex {
+  display: flex;
+  height: 100%;
+
+  &__col {
+    @extend .flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    @extend .flex;
+    flex-direction: row;
+  }
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}

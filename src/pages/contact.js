@@ -1,6 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import {
   FaEnvelope,
   FaGithub,
@@ -15,16 +13,8 @@ const ContactPage = () => (
   <Layout>
     <SEO title='Contact' />
     <MainContainer>
-      <Row style={{ flex: '1 auto' }}>
-        <Col
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-          md={true}
-          className='mx-4'
-        >
+      <div className='row-md'>
+        <div className='col'>
           <h1>Contact</h1>
           <p className='mb-4'>
             Want to get in touch? Feel free to send me an email or message me at
@@ -78,26 +68,22 @@ const ContactPage = () => (
               <span>github.com/augustsjogren</span>
             </a>
           </p>
-        </Col>
-        <Col
-          md
-          className='d-flex d-md-flex flex-column justify-content-center align-items-center mx-4 mt-4 mt-md-0'
-        >
-          <Row>
-            <Col>
-              <FaMapMarkerAlt className='d-none d-md-block' size='120' />
-              <FaMapMarkerAlt className='d-block d-md-none' size='80' />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <p className='mt-4' style={{ fontSize: '1.5rem' }}>
-                Linköping, SE
-              </p>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+        </div>
+        <div className='col'>
+          <div className='flex__col center'>
+            <FaMapMarkerAlt size='80' />
+            <p
+              style={{
+                fontSize: '1.5rem',
+                textAlign: 'center',
+                marginTop: '2rem',
+              }}
+            >
+              Linköping, SE
+            </p>
+          </div>
+        </div>
+      </div>
     </MainContainer>
   </Layout>
 );

@@ -1,12 +1,8 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import '../../styles/layout.scss';
 
 const MainContainer = props => {
-  return (
-    <Container fluid='xl' className='h-100 d-flex align-items-center'>
-      {props.children}
-    </Container>
-  );
+  return <div className='main-container align-center'>{props.children}</div>;
 };
 
 export default MainContainer;
