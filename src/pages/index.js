@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import BioImage from '../components/image';
 import Layout from '../components/layout';

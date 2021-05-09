@@ -3,7 +3,7 @@ import {
   FaEnvelope,
   FaGithub,
   FaLinkedin,
-  FaMapMarkerAlt
+  FaMapMarkerAlt,
 } from 'react-icons/fa';
 import Layout from '../components/layout';
 import MainContainer from '../components/layout/mainContainer';
