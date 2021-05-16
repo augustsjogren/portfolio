@@ -20,54 +20,51 @@ const ContactPage = () => (
             Want to get in touch? Feel free to send me an email or message me at
             LinkedIn!
           </p>
-          <p className='mb-2'>
-            <a
-              href='mailto:contact@augustsjogren.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <span>
+          <ul>
+            <li>
+              <a
+                href='mailto:contact@augustsjogren.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <FaEnvelope
                   color='black'
                   size='24px'
                   style={{ marginRight: '15px' }}
                 />
-              </span>
-              <span>contact@augustsjogren.com</span>
-            </a>
-          </p>
-          <p className='mb-2'>
-            <a
-              href='https://www.linkedin.com/in/august-sjogren'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <span>
+                <span>contact@augustsjogren.com</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href='https://www.linkedin.com/in/august-sjogren'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <FaLinkedin
                   color='black'
                   size='24px'
                   style={{ marginRight: '15px' }}
                 />
-              </span>
-              <span>linkedin.com/in/august-sjogren</span>
-            </a>
-          </p>
-          <p>
-            <a
-              href='https://github.com/augustsjogren'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <span>
+
+                <span>linkedin.com/in/august-sjogren</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href='https://github.com/augustsjogren'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <FaGithub
                   color='black'
                   size='24px'
                   style={{ marginRight: '15px' }}
                 />
-              </span>
-              <span>github.com/augustsjogren</span>
-            </a>
-          </p>
+                <span>github.com/augustsjogren</span>
+              </a>
+            </li>
+          </ul>
         </div>
         <div className='col'>
           <div className='flex__col center'>

@@ -7,6 +7,10 @@ $bp-medium: 768px;
   justify-content: center;
   height: 100%;
   padding: 2rem;
+
+  @media (max-width: $bp-medium) {
+    padding: 0.5rem;
+  }
 }
 
 .row {
@@ -23,7 +27,16 @@ $bp-medium: 768px;
 
 .col {
   display: block;
-  padding: .5rem;
+  padding: 1.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex: 1;
+
+  &:first-child{
+    @media (max-width: $bp-medium) {
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 /*--- Positioning ---*/
@@ -56,6 +69,6 @@ $bp-medium: 768px;
   align-items: center;
 }
 
-.justify-end{
-    justify-content: flex-end;
+.justify-end {
+  justify-content: flex-end;
 }

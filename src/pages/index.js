@@ -1,17 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import BioImage from '../components/image';
 import Layout from '../components/layout';
 import MainContainer from '../components/layout/mainContainer';
 import SEO from '../components/seo';
-import '../styles/layout.scss';
 
 const IndexPage = () => (
   <Layout>
     <SEO title='Home' />
     <MainContainer>
       <div className='row-md'>
-        <div className='col justify-center align-center'>
+        <div className='col justify-center'>
           <div className='flex__col justify-center'>
             <h1>Hi!</h1>
             <p>
