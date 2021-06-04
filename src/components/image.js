@@ -19,10 +19,6 @@ const BioImage = () => {
     <Img
       loading='eager'
       fluid={data.placeholderImage.childImageSharp.fluid}
-      style={{
-        top: '50%',
-        transform: 'translateY(-50%)',
-      }}
     />
   );
 };

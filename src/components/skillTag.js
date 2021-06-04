@@ -11,6 +11,7 @@ const SkillTag = props => {
         paddingBottom: '10px',
         border: '2px solid black',
         borderRadius: '50px',
+        color: '#000000'
       }}
     >
       {props.content}

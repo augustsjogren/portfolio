@@ -1,0 +1,27 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+html{
+    color: #000000cc;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  li {
+    display: flex;
+
+    * {
+      display: flex;
+    }
+  }
+}
