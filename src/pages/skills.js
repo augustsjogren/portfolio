@@ -7,16 +7,16 @@ import '../styles/skills.scss';
 
 const skills = [
   'React.js',
-  'React Native',
+  '.NET',
   'Blazor',
+  'React Native',
   'JavaScript',
   'HTML',
   'CSS',
-  '.NET',
   'SQL Server',
 ];
 
-const skillsList = skills.map((skill, index) => <SkillTag content={skill} />);
+const skillsList = skills.map((skill, index) => <SkillTag key={index} content={skill} />);
 
 const SkillsPage = () => (
   <Layout>
