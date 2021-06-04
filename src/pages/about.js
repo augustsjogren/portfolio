@@ -18,7 +18,7 @@ const AboutPage = () => (
             towards front end. I also enjoy creating mobile applications in
             React Native, where I can utilize my web development skills. Outside
             of work I like to spend my time on other creative hobbies, such as
-            producing music or fiddling with some new cool tech. Excercise is
+            producing music or fiddling with some new cool tech. Exercise is
             also an important part of my everyday life, and I like to try out
             new activities and sports.
           </p>
