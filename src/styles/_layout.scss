@@ -1,0 +1,84 @@
+/*--- Variables ---*/
+$bp-medium: 768px;
+
+/*--- Elements ---*/
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+/*--- Grid ---*/
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+
+  max-width: 1200px;
+
+  @media (max-width: $bp-medium) {
+    padding: 0.5rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  &-md {
+    @extend .row;
+    @media (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+  }
+}
+
+.col {
+  display: block;
+  padding: 1.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex: 1;
+
+  &:first-child {
+    @media (max-width: $bp-medium) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/*--- Positioning ---*/
+
+.flex {
+  display: flex;
+  height: 100%;
+
+  &__col {
+    @extend .flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    @extend .flex;
+    flex-direction: row;
+  }
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
