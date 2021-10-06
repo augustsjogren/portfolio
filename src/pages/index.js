@@ -13,7 +13,7 @@ const IndexPage = () => (
           <div className='flex__col justify-center'>
             <h1>Hi!</h1>
             <p>
-              I'm August, a software developer based in Linköping, Sweden. I
+              I'm August, a software developer based in Helsingborg, Sweden. I
               enjoy writing code for applications that gives the user a great
               experience. Simple as that.
             </p>
