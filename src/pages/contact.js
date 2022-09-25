@@ -23,7 +23,7 @@ const ContactPage = () => (
           <ul>
             <li>
               <a
-                href='mailto:contact@augustsjogren.com'
+                href='mailto:hello@augustsjogren.com'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -32,7 +32,7 @@ const ContactPage = () => (
                   size='24px'
                   style={{ marginRight: '15px' }}
                 />
-                <span>contact@augustsjogren.com</span>
+                <span>hello@augustsjogren.com</span>
               </a>
             </li>
             <li>
