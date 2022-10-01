@@ -1,24 +1,13 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import Header from './header';
 import './layout.css';
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
+const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         <main style={{ flex: 1 }}>{children}</main>
       </div>
     </>
