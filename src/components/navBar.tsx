@@ -3,11 +3,6 @@ import '../styles/navbar.scss';
 import { Link } from 'react-router-dom';
 
 export default function NavBar() {
-  // const headerActiveStyle = {
-  //   textDecoration: 'underline',
-  //   textUnderlinePosition: 'under',
-  // };
-
   return (
     <div className='navbar-container'>
       <div className='navbar-brand'>
