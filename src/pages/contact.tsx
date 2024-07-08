@@ -12,8 +12,6 @@ import { usePageTitle } from '../hooks/usePageTitle';
 const ContactPage = () => {
   usePageTitle('Contact');
 
-  console.log('hello');
-
   return (
     <Layout>
       <MainContainer>
