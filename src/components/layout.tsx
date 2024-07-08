@@ -6,7 +6,9 @@ import './layout.css';
 const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+      <div
+        style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}
+      >
         <Header />
         <main style={{ flex: 1 }}>{children}</main>
       </div>
