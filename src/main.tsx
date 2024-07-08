@@ -6,6 +6,8 @@ import AboutPage from './pages/about';
 import SkillsPage from './pages/skills';
 import ContactPage from './pages/contact';
 
+import './styles/style.scss';
+
 const router = createBrowserRouter([
   { path: '/', element: <IndexPage /> },
   { path: '/about', element: <AboutPage /> },
