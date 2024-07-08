@@ -74,7 +74,7 @@ const ContactPage = () => (
                 marginTop: '2rem',
               }}
             >
-              Helsingborg, SE
+              Malmö, SE
             </p>
           </div>
         </div>
