@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import '../styles/navbar.scss';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
-  const headerActiveStyle = {
-    textDecoration: 'underline',
-    textUnderlinePosition: 'under',
-  };
+  // const headerActiveStyle = {
+  //   textDecoration: 'underline',
+  //   textUnderlinePosition: 'under',
+  // };
 
   return (
     <div className='navbar-container'>
@@ -23,28 +23,16 @@ export default function NavBar() {
       </div>
 
       <div className='navbar-links'>
-        <Link to='/' className='header-link' activeStyle={headerActiveStyle}>
+        <Link to='/' className='header-link'>
           Home
         </Link>
-        <Link
-          to='/about'
-          className='header-link'
-          activeStyle={headerActiveStyle}
-        >
+        <Link to='/about' className='header-link'>
           About
         </Link>
-        <Link
-          to='/skills'
-          activeStyle={headerActiveStyle}
-          className='header-link'
-        >
+        <Link to='/skills' className='header-link'>
           Skills
         </Link>
-        <Link
-          to='/contact'
-          activeStyle={headerActiveStyle}
-          className='header-link'
-        >
+        <Link to='/contact' className='header-link'>
           Contact
         </Link>
       </div>

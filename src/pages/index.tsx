@@ -2,11 +2,9 @@ import React from 'react';
 import BioImage from '../components/image';
 import Layout from '../components/layout';
 import MainContainer from '../components/layout/mainContainer';
-import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title='Home' />
     <MainContainer>
       <div className='row-md'>
         <div className='col justify-center'>

@@ -3,12 +3,10 @@ import { BsCodeSlash, BsMusicNoteBeamed } from 'react-icons/bs';
 import { RiRunLine } from 'react-icons/ri';
 import Layout from '../components/layout';
 import MainContainer from '../components/layout/mainContainer';
-import SEO from '../components/seo';
 import '../styles/about.scss';
 
 const AboutPage = () => (
   <Layout>
-    <SEO title='Home' />
     <MainContainer>
       <div className='row-md'>
         <div className='col'>

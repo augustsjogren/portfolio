@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
 import MainContainer from '../components/layout/mainContainer';
-import SEO from '../components/seo';
 import SkillTag from '../components/skillTag';
 import '../styles/skills.scss';
 
@@ -16,11 +15,12 @@ const skills = [
   'SQL Server',
 ];
 
-const skillsList = skills.map((skill, index) => <SkillTag key={index} content={skill} />);
+const skillsList = skills.map((skill, index) => (
+  <SkillTag key={index} content={skill} />
+));
 
 const SkillsPage = () => (
   <Layout>
-    <SEO title='Skills' />
     <MainContainer>
       <div className='row-md'>
         <div className='col'>

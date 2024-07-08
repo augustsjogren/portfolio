@@ -7,11 +7,9 @@ import {
 } from 'react-icons/fa';
 import Layout from '../components/layout';
 import MainContainer from '../components/layout/mainContainer';
-import SEO from '../components/seo';
 
 const ContactPage = () => (
   <Layout>
-    <SEO title='Contact' />
     <MainContainer>
       <div className='row-md'>
         <div className='col'>
