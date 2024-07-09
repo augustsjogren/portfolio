@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './styles/style.scss';
+import { Suspense } from 'react';
 
 const IndexPage = React.lazy(() => import('./pages/index'));
 const AboutPage = React.lazy(() => import('./pages/about'));
@@ -21,6 +22,8 @@ const root = ReactDOM.createRoot(domNode);
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Suspense>
+      <RouterProvider router={router} />
+    </Suspense>
   </React.StrictMode>
 );
