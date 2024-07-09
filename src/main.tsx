@@ -1,12 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import IndexPage from './pages';
-import AboutPage from './pages/about';
-import SkillsPage from './pages/skills';
-import ContactPage from './pages/contact';
 
 import './styles/style.scss';
+
+const IndexPage = React.lazy(() => import('./pages/index'));
+const AboutPage = React.lazy(() => import('./pages/about'));
+const SkillsPage = React.lazy(() => import('./pages/skills'));
+const ContactPage = React.lazy(() => import('./pages/contact'));
 
 const router = createBrowserRouter([
   { path: '/', element: <IndexPage /> },
