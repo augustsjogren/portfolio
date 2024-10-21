@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/header.scss';
-import NavBar from './navBar';
+import { NavBar } from './navBar';
 
 const Header = () => (
   <header
@@ -8,7 +8,7 @@ const Header = () => (
       background: `white`,
     }}
   >
-    <NavBar></NavBar>
+    <NavBar />
   </header>
 );
 
