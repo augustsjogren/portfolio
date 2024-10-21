@@ -1,35 +1,22 @@
 import React from 'react';
 import '../styles/navbar.scss';
 import { Link } from 'react-router-dom';
+import { HeaderLink } from './HeaderLink';
 
 export const NavBar = () => {
   return (
     <div className='navbar-container'>
       <div className='navbar-brand'>
-        <Link
-          to='/'
-          style={{
-            color: 'black',
-            textDecoration: 'none',
-          }}
-        >
+        <Link to='/' className='header-link'>
           AS
         </Link>
       </div>
 
       <div className='navbar-links'>
-        <Link to='/' className='header-link'>
-          Home
-        </Link>
-        <Link to='about' className='header-link'>
-          About
-        </Link>
-        <Link to='skills' className='header-link'>
-          Skills
-        </Link>
-        <Link to='contact' className='header-link'>
-          Contact
-        </Link>
+        <HeaderLink to='/'>Home</HeaderLink>
+        <HeaderLink to='about'>About</HeaderLink>
+        <HeaderLink to='skills'>Skills</HeaderLink>
+        <HeaderLink to='contact'>Contact</HeaderLink>
       </div>
     </div>
   );
