@@ -17,6 +17,8 @@ li {
   &:focus-visible {
     outline-color: black;
     outline-offset: 6px;
+    outline-style: solid;
+    outline-width: 2px;
     border-radius: 8px;
   }
 }
