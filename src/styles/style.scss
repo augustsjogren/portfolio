@@ -12,3 +12,11 @@ li {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+* {
+  &:focus-visible {
+    outline-color: black;
+    outline-offset: 6px;
+    border-radius: 8px;
+  }
+}
