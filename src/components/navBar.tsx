@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/navbar.scss';
 import { Link } from 'react-router-dom';
 
-export default function NavBar() {
+export const NavBar = () => {
   return (
     <div className='navbar-container'>
       <div className='navbar-brand'>
@@ -21,16 +21,16 @@ export default function NavBar() {
         <Link to='/' className='header-link'>
           Home
         </Link>
-        <Link to='/about' className='header-link'>
+        <Link to='about' className='header-link'>
           About
         </Link>
-        <Link to='/skills' className='header-link'>
+        <Link to='skills' className='header-link'>
           Skills
         </Link>
-        <Link to='/contact' className='header-link'>
+        <Link to='contact' className='header-link'>
           Contact
         </Link>
       </div>
     </div>
   );
-}
+};

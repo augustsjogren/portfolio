@@ -4,17 +4,23 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './styles/style.scss';
 import { Suspense } from 'react';
-
-const IndexPage = React.lazy(() => import('./pages/index'));
-const AboutPage = React.lazy(() => import('./pages/about'));
-const SkillsPage = React.lazy(() => import('./pages/skills'));
-const ContactPage = React.lazy(() => import('./pages/contact'));
+import Layout from './components/layout';
+import IndexPage from './pages';
+import AboutPage from './pages/about';
+import ContactPage from './pages/contact';
+import SkillsPage from './pages/skills';
 
 const router = createBrowserRouter([
-  { path: '/', element: <IndexPage /> },
-  { path: '/about', element: <AboutPage /> },
-  { path: '/skills', element: <SkillsPage /> },
-  { path: '/contact', element: <ContactPage /> },
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { element: <IndexPage />, index: true },
+      { path: 'about', element: <AboutPage /> },
+      { path: 'skills', element: <SkillsPage /> },
+      { path: 'contact', element: <ContactPage /> },
+    ],
+  },
 ]);
 
 const domNode = document.getElementById('root') as HTMLElement;
