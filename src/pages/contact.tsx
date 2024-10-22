@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import {
   FaEnvelope,
   FaGithub,
@@ -7,6 +7,14 @@ import {
 } from 'react-icons/fa';
 import MainContainer from '../components/layout/mainContainer';
 import { usePageTitle } from '../hooks/usePageTitle';
+import { IconListItem } from '../components/IconListItem';
+
+const iconStyle: CSSProperties = {
+  marginRight: '15px',
+  height: '24px',
+  width: '24px',
+  color: 'black',
+};
 
 const ContactPage = () => {
   usePageTitle('Contact');
@@ -24,57 +32,25 @@ const ContactPage = () => {
         <div className='col'>
           <div className='flex__col'>
             <ul>
-              <li>
-                <a
-                  href='mailto:hello@augustsjogren.com'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <FaEnvelope
-                    color='black'
-                    size='24px'
-                    style={{ marginRight: '15px' }}
-                  />
-                  <span>hello@augustsjogren.com</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href='https://www.linkedin.com/in/august-sjogren'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <FaLinkedin
-                    color='black'
-                    size='24px'
-                    style={{ marginRight: '15px' }}
-                  />
-
-                  <span>linkedin.com/in/august-sjogren</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href='https://github.com/augustsjogren'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <FaGithub
-                    color='black'
-                    size='24px'
-                    style={{ marginRight: '15px' }}
-                  />
-                  <span>github.com/augustsjogren</span>
-                </a>
-              </li>
-              <li>
-                <FaMapMarkerAlt
-                  color='black'
-                  size='24px'
-                  style={{ marginRight: '15px' }}
-                />
-                <span>Malmö, Sweden</span>
-              </li>
+              <IconListItem
+                href='mailto:hello@augustsjogren.com'
+                text='hello@augustsjogren.com'
+                icon={<FaEnvelope style={iconStyle} />}
+              />
+              <IconListItem
+                href='https://www.linkedin.com/in/august-sjogren'
+                text='linkedin.com/in/august-sjogren'
+                icon={<FaLinkedin style={iconStyle} />}
+              />
+              <IconListItem
+                href='https://github.com/augustsjogren'
+                text='github.com/augustsjogren'
+                icon={<FaGithub style={iconStyle} />}
+              />
+              <IconListItem
+                text='Malmö, Sweden'
+                icon={<FaMapMarkerAlt style={iconStyle} />}
+              />
             </ul>
           </div>
         </div>
