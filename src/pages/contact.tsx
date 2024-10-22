@@ -20,64 +20,62 @@ const ContactPage = () => {
             Want to get in touch? Feel free to send me an email or message me at
             LinkedIn!
           </p>
-          <ul>
-            <li>
-              <a
-                href='mailto:hello@augustsjogren.com'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <FaEnvelope
-                  color='black'
-                  size='24px'
-                  style={{ marginRight: '15px' }}
-                />
-                <span>hello@augustsjogren.com</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://www.linkedin.com/in/august-sjogren'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <FaLinkedin
-                  color='black'
-                  size='24px'
-                  style={{ marginRight: '15px' }}
-                />
-
-                <span>linkedin.com/in/august-sjogren</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://github.com/augustsjogren'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <FaGithub
-                  color='black'
-                  size='24px'
-                  style={{ marginRight: '15px' }}
-                />
-                <span>github.com/augustsjogren</span>
-              </a>
-            </li>
-          </ul>
         </div>
         <div className='col'>
-          <div className='flex__col center'>
-            <FaMapMarkerAlt size='80' />
-            <p
-              style={{
-                fontSize: '1.5rem',
-                textAlign: 'center',
-                marginTop: '2rem',
-              }}
-            >
-              Malmö, SE
-            </p>
+          <div className='flex__col'>
+            <ul>
+              <li>
+                <a
+                  href='mailto:hello@augustsjogren.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <FaEnvelope
+                    color='black'
+                    size='24px'
+                    style={{ marginRight: '15px' }}
+                  />
+                  <span>hello@augustsjogren.com</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.linkedin.com/in/august-sjogren'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <FaLinkedin
+                    color='black'
+                    size='24px'
+                    style={{ marginRight: '15px' }}
+                  />
+
+                  <span>linkedin.com/in/august-sjogren</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://github.com/augustsjogren'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <FaGithub
+                    color='black'
+                    size='24px'
+                    style={{ marginRight: '15px' }}
+                  />
+                  <span>github.com/augustsjogren</span>
+                </a>
+              </li>
+              <li>
+                <FaMapMarkerAlt
+                  color='black'
+                  size='24px'
+                  style={{ marginRight: '15px' }}
+                />
+                <span>Malmö, Sweden</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
