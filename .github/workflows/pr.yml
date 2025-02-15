@@ -6,4 +6,4 @@ on:
 jobs:
   verify:
     name: Verify PR build
-    uses: './.github/workflows/verify.yml'
+    uses: './.github/workflows/builddeploy.yml'
