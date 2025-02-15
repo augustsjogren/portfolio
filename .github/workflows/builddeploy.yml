@@ -36,6 +36,9 @@ jobs:
 
   # Deployment job
   deploy:
+    permissions:
+      id-token: write
+      pages: write
     name: Deploy
     runs-on: ubuntu-latest
     environment:
