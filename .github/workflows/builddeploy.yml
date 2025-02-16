@@ -10,6 +10,9 @@ jobs:
   build:
     name: Build and lint
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,11 +31,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Publish to cloudflare pages
-        uses: cloudflare/pages-action@v1
+      - name: Deploy to cloudflare pages
+
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: portfolio # e.g. 'my-project'
-          directory: dist # e.g. 'dist'
+          command: pages deploy dist --project-name=portfolio
+          # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
