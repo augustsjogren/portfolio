@@ -10,21 +10,18 @@ import AboutPage from './pages/about';
 import ContactPage from './pages/contact';
 import SkillsPage from './pages/skills';
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      element: <Layout />,
-      children: [
-        { element: <IndexPage />, index: true },
-        { path: 'about', element: <AboutPage /> },
-        { path: 'skills', element: <SkillsPage /> },
-        { path: 'contact', element: <ContactPage /> },
-      ],
-    },
-  ],
-  { basename: '/portfolio' }
-);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { element: <IndexPage />, index: true },
+      { path: 'about', element: <AboutPage /> },
+      { path: 'skills', element: <SkillsPage /> },
+      { path: 'contact', element: <ContactPage /> },
+    ],
+  },
+]);
 
 const domNode = document.getElementById('root') as HTMLElement;
 const root = ReactDOM.createRoot(domNode);
