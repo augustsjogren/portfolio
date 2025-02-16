@@ -7,3 +7,4 @@ jobs:
   verify:
     name: Verify PR build
     uses: './.github/workflows/builddeploy.yml'
+    secrets: inherit
