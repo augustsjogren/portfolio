@@ -8,3 +8,4 @@ jobs:
   verify:
     name: Build and deploy master build
     uses: './.github/workflows/builddeploy.yml'
+    secrets: inherit
