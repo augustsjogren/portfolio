@@ -13,3 +13,4 @@ jobs:
     needs: [build]
     name: Deploy site
     uses: './.github/workflows/deploy.yml'
+    secrets: inherit
