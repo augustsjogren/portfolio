@@ -21,7 +21,6 @@
   "env": { "browser": true, "node": true },
   "rules": {
     "no-console": "error",
-    "react/prop-types": "off",
     "no-unused-vars": "error",
     "no-duplicate-imports": "error"
   }

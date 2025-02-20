@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SkillTag = (props) => {
+const SkillTag = (props: { content: string }) => {
   return (
     <div
       style={{
