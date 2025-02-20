@@ -5,7 +5,13 @@ on:
     branches: [master]
 
 jobs:
-  verify:
+  build:
     name: Build
     uses: './.github/workflows/build.yml'
+    secrets: inherit
+
+  deploy:
+    needs: [build]
+    name: Deploy site
+    uses: './.github/workflows/deploy.yml'
     secrets: inherit
