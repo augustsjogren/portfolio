@@ -4,6 +4,7 @@
   "description": "",
   "version": "0.1.0",
   "author": "August Sjögren <hello@augustsjogren.com>",
+  "type": "module",
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
@@ -23,7 +24,7 @@
     "eslint-plugin-react": "^7.37.1",
     "prettier": "^3.4.1",
     "typescript": "^5.5.3",
-    "vite": "^5.3.3"
+    "vite": "^6.1.1"
   },
   "scripts": {
     "dev": "vite",
