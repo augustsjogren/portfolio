@@ -4,11 +4,12 @@ on:
   pull_request:
 
 jobs:
-  verify:
+  build:
     name: Build Pull Request
     uses: './.github/workflows/build.yml'
     secrets: inherit
 
   deploy:
+    needs: [build]
     name: Deploy site
     uses: './.github/workflows/deploy.yml'
