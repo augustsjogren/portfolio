@@ -1,4 +1,4 @@
-name: Build and deploy
+name: Deploy
 
 on:
   workflow_call:
@@ -7,32 +7,21 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  build:
-    name: Build and lint
-    runs-on: ubuntu-latest
+  deploy:
+    name: Deploy
     permissions:
       contents: read
       deployments: write
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+
+      - uses: actions/download-artifact@v4
         with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Audit
-        run: npm audit
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Build
-        run: npm run build
+          name: portfolio-build
+          path: dist
 
       - name: Deploy to cloudflare pages
-
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
