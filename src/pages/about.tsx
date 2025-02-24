@@ -14,13 +14,16 @@ const AboutPage = () => {
         <div className='col'>
           <h1>About</h1>
           <p>
-            As a developer I&apos;m mainly focused on the web, where I gravitate
-            towards front end. I also enjoy creating mobile applications in
-            React Native, where I can utilize my web development skills. Outside
-            of work I like to spend my time on other creative hobbies, such as
-            producing music or fiddling with some new cool tech. Exercise is
-            also an important part of my everyday life, and I like to try out
-            new activities and sports.
+            I&apos;m a web-focused developer with a passion for solving the full
+            problem, whether that means working on the front end, back end, or
+            anything in between. I don&apos;t get too caught up in specific
+            tools as I enjoy adapting to whatever best fits the task at hand.
+          </p>
+          <p>
+            Beyond coding, I&apos;m always exploring creative outlets, whether
+            it&apos;s producing music, experimenting with tech, or diving into a
+            new sport. Staying active is a big part of my daily routine, and I
+            love the challenge of trying out different activities.
           </p>
         </div>
         <div className='col'>
