@@ -1,13 +1,11 @@
 import React from 'react';
 import BioImage from '../components/image';
 import MainContainer from '../components/layout/mainContainer';
-import { usePageTitle } from '../hooks/usePageTitle';
 
 const IndexPage = () => {
-  usePageTitle('Home');
-
   return (
     <MainContainer>
+      <title>Home</title>
       <div className='row-md'>
         <div className='col justify-center'>
           <div className='flex__col justify-center'>

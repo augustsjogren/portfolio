@@ -2,15 +2,14 @@ import React from 'react';
 import MainContainer from '../components/layout/mainContainer';
 import SkillTag from '../components/skillTag';
 import '../styles/skills.scss';
-import { usePageTitle } from '../hooks/usePageTitle';
 import { useSkills } from '../hooks/useSkills';
 
 const SkillsPage = () => {
-  usePageTitle('Skills');
   const { skills } = useSkills();
 
   return (
     <MainContainer>
+      <title>Skills</title>
       <div className='row-md'>
         <div className='col'>
           <h1>Skills</h1>

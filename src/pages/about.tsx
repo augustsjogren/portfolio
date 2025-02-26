@@ -3,13 +3,11 @@ import { BsCodeSlash, BsMusicNoteBeamed } from 'react-icons/bs';
 import { RiRunLine } from 'react-icons/ri';
 import MainContainer from '../components/layout/mainContainer';
 import '../styles/about.scss';
-import { usePageTitle } from '../hooks/usePageTitle';
 
 const AboutPage = () => {
-  usePageTitle('About');
-
   return (
     <MainContainer>
+      <title>About</title>
       <div className='row-md'>
         <div className='col'>
           <h1>About</h1>

@@ -6,7 +6,6 @@ import {
   FaMapMarkerAlt,
 } from 'react-icons/fa';
 import MainContainer from '../components/layout/mainContainer';
-import { usePageTitle } from '../hooks/usePageTitle';
 import { IconListItem } from '../components/IconListItem';
 
 const iconStyle: CSSProperties = {
@@ -17,10 +16,9 @@ const iconStyle: CSSProperties = {
 };
 
 const ContactPage = () => {
-  usePageTitle('Contact');
-
   return (
     <MainContainer>
+      <title>Contact</title>
       <div className='row-md'>
         <div className='col'>
           <h1>Contact</h1>
