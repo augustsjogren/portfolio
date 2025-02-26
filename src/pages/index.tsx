@@ -1,5 +1,6 @@
 import React from 'react';
-import BioImage from '../components/image';
+import '../styles/image.scss';
+import profileImage from '../images/Aggebagge_web.webp';
 import MainContainer from '../components/layout/mainContainer';
 
 const IndexPage = () => {
@@ -18,7 +19,7 @@ const IndexPage = () => {
           </div>
         </div>
         <div className='col'>
-          <BioImage />
+          <img alt='' src={profileImage} className='bio-img' />
         </div>
       </div>
     </MainContainer>

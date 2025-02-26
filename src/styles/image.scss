@@ -1,16 +1,5 @@
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .bio-img {
   background-color: lightgray;
   width: 100%;
   aspect-ratio: 3/2;
-
-  animation: fadeIn 1s ease-out;
 }
