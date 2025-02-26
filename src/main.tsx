@@ -5,10 +5,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/style.scss';
 import { Suspense } from 'react';
 import Layout from './components/layout';
-import IndexPage from './pages';
-import AboutPage from './pages/about';
-import ContactPage from './pages/contact';
-import SkillsPage from './pages/skills';
+const IndexPage = React.lazy(() => import('./pages/'));
+const AboutPage = React.lazy(() => import('./pages/about'));
+const ContactPage = React.lazy(() => import('./pages/contact'));
+const SkillsPage = React.lazy(() => import('./pages/skills'));
 
 const router = createBrowserRouter([
   {
