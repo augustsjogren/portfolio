@@ -1,22 +1,8 @@
 import React from 'react';
+import '../styles/skillTag.scss';
 
 const SkillTag = (props: { content: string }) => {
-  return (
-    <div
-      style={{
-        margin: '5px',
-        display: 'inline-block',
-        padding: '15px',
-        paddingTop: '10px',
-        paddingBottom: '10px',
-        border: '2px solid black',
-        borderRadius: '50px',
-        color: '#000000',
-      }}
-    >
-      {props.content}
-    </div>
-  );
+  return <div className='skill-tag'>{props.content}</div>;
 };
 
 export default SkillTag;

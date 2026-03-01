@@ -8,9 +8,14 @@ const SKILLS = [
   'HTML',
   'CSS',
   'SQL Server',
+  'PostgreSQL',
   'Azure',
   'AWS',
   'node.js',
+  'Docker',
+  'Playwright',
+  'Cypress',
+  'GitHub Actions',
 ];
 
 export const useSkills = () => {
