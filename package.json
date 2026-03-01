@@ -15,6 +15,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.21.0",
+    "@playwright/test": "^1.58.2",
     "@types/node": "^24.9.1",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
@@ -32,6 +33,10 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint": "eslint ./src/"
+    "lint": "eslint ./src/",
+    "test": "echo \"No unit tests configured yet\"",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug"
   }
 }
