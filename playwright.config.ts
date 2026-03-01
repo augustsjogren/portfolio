@@ -7,7 +7,11 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI
-    ? [['html'], ['json', { outputFile: 'test-results/results.json' }], ['junit', { outputFile: 'test-results/junit.xml' }]]
+    ? [
+        ['html'],
+        ['json', { outputFile: 'test-results/results.json' }],
+        ['junit', { outputFile: 'test-results/junit.xml' }],
+      ]
     : 'html',
   timeout: 30 * 1000,
   expect: {
