@@ -72,3 +72,6 @@ cache/
 /playwright-report/
 /test-results/
 /blob-report/
+
+# TypeScript build info
+tsconfig.tsbuildinfo
