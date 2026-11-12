@@ -1,5 +1,5 @@
-import React, { PropsWithChildren } from 'react';
-import { NavLink, To } from 'react-router-dom';
+import type { PropsWithChildren } from 'react';
+import { NavLink, type To } from 'react-router-dom';
 
 export const HeaderLink = ({ children, to }: PropsWithChildren<{ to: To }>) => {
   return (

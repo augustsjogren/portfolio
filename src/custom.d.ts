@@ -1,14 +1,13 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 declare module '*.scss';
 
 declare module '*.css';
 
 declare module '*.jpg' {
-  const value: any;
+  const value: string;
   export = value;
 }
 
 declare module '*.webp' {
-  const value: any;
+  const value: string;
   export = value;
 }
