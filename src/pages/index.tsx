@@ -1,4 +1,4 @@
-import React from 'react';
+
 import '../styles/image.scss';
 import profileImage from '../images/Aggebagge_web.webp';
 import MainContainer from '../components/layout/mainContainer';

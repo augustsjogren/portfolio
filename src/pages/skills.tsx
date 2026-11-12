@@ -1,4 +1,4 @@
-import React from 'react';
+
 import MainContainer from '../components/layout/mainContainer';
 import SkillTag from '../components/skillTag';
 import '../styles/skills.scss';
@@ -23,8 +23,8 @@ const SkillsPage = () => {
         <div className='col'>
           <div className='flex center skill-list'>
             <div>
-              {skills.map((skill, index) => (
-                <SkillTag key={index} content={skill} />
+              {skills.map((skill) => (
+                <SkillTag key={skill} content={skill} />
               ))}
             </div>
           </div>

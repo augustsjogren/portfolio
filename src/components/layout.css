@@ -49,11 +49,13 @@ a:hover {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
+  /* biome-ignore lint/suspicious/noDuplicateProperties: fallback for browsers without `underline dotted` */
   text-decoration: underline dotted;
 }
 b,
 strong {
   font-weight: inherit;
+  /* biome-ignore lint/suspicious/noDuplicateProperties: fallback for browsers without `bolder` */
   font-weight: bolder;
 }
 dfn {

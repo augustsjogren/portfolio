@@ -38,7 +38,7 @@ Defined in `src/main.tsx`: `/` (home), `/about`, `/skills`, `/contact`, plus a 4
 npm install          # Install dependencies
 npm run dev          # Dev server on http://localhost:5173
 npm run build        # tsc && vite build
-npm run lint         # ESLint on src/
+npm run lint         # Biome lint on src/
 npm run format       # Prettier
 npm run test:e2e     # Playwright e2e tests (auto-starts the dev server)
 npm run test:e2e:ui  # Interactive Playwright UI for debugging
@@ -75,7 +75,7 @@ Testing details, patterns and anti-patterns: see [TESTING.md](./TESTING.md) and 
 
 - **TypeScript strict mode** is on — don't weaken it or add `any` to silence errors
 - **Styling:** Sass, one stylesheet per page/component in `src/styles/`, imported from the component
-- **Pre-commit hooks:** husky + lint-staged run ESLint and Prettier on staged files — expect this on every commit
+- **Pre-commit hooks:** husky + lint-staged run Biome and Prettier on staged files — expect this on every commit
 - **Don't commit build artifacts** (`dist/`, `cache/`, `tsconfig.tsbuildinfo`, `test-results/`, `playwright-report/` are gitignored)
 - CI blocks merge on failing tests — that's intentional
 

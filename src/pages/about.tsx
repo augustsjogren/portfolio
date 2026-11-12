@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BsCodeSlash, BsMusicNoteBeamed } from 'react-icons/bs';
 import { RiRunLine } from 'react-icons/ri';
 import MainContainer from '../components/layout/mainContainer';
