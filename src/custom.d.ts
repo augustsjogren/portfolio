@@ -1,4 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+declare module '*.scss';
+
+declare module '*.css';
+
 declare module '*.jpg' {
   const value: any;
   export = value;
