@@ -1,7 +1,7 @@
 
 import MainContainer from '../components/layout/mainContainer';
 import SkillTag from '../components/skillTag';
-import '../styles/skills.scss';
+import styles from './skills.module.css';
 import { useSkills } from '../hooks/useSkills';
 
 const SkillsPage = () => {
@@ -21,7 +21,7 @@ const SkillsPage = () => {
           </p>
         </div>
         <div className='col'>
-          <div className='flex center skill-list'>
+          <div className={`flex center ${styles['skill-list']}`}>
             <div>
               {skills.map((skill) => (
                 <SkillTag key={skill} content={skill} />

@@ -1,6 +1,3 @@
-/*--- Variables ---*/
-$bp-medium: 768px;
-
 /*--- Elements ---*/
 
 main {
@@ -17,22 +14,12 @@ main {
   padding: 2rem;
 
   max-width: 1200px;
-
-  @media (max-width: $bp-medium) {
-    padding: 0.5rem;
-  }
 }
 
-.row {
+.row,
+.row-md {
   display: flex;
   flex-direction: row;
-
-  &-md {
-    @extend .row;
-    @media (max-width: $bp-medium) {
-      flex-direction: column;
-    }
-  }
 }
 
 .col {
@@ -41,29 +28,18 @@ main {
   padding-top: 0;
   padding-bottom: 0;
   flex: 1;
-
-  &:first-child {
-    @media (max-width: $bp-medium) {
-      margin-bottom: 1rem;
-    }
-  }
 }
 
 /*--- Positioning ---*/
 
-.flex {
+.flex,
+.flex--col {
   display: flex;
   height: 100%;
+}
 
-  &__col {
-    @extend .flex;
-    flex-direction: column;
-  }
-
-  &__row {
-    @extend .flex;
-    flex-direction: row;
-  }
+.flex--col {
+  flex-direction: column;
 }
 
 .justify-center {
@@ -79,6 +55,18 @@ main {
   align-items: center;
 }
 
-.justify-end {
-  justify-content: flex-end;
+/*--- Breakpoints ---*/
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 0.5rem;
+  }
+
+  .row-md {
+    flex-direction: column;
+  }
+
+  .col:first-child {
+    margin-bottom: 1rem;
+  }
 }

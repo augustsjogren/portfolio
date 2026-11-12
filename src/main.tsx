@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import './styles/style.scss';
+import './styles/global.css';
 import { Suspense } from 'react';
 import Layout from './components/layout';
 const IndexPage = React.lazy(() => import('./pages/'));

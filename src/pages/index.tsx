@@ -1,5 +1,5 @@
 
-import '../styles/image.scss';
+import styles from './index.module.css';
 import profileImage from '../images/Aggebagge_web.webp';
 import MainContainer from '../components/layout/mainContainer';
 
@@ -9,7 +9,7 @@ const IndexPage = () => {
       <title>Home</title>
       <div className='row-md'>
         <div className='col justify-center'>
-          <div className='flex__col justify-center'>
+          <div className='flex--col justify-center'>
             <h1>Hi!</h1>
             <p>
               I&apos;m August, a software developer based in Malmö, Sweden. I
@@ -19,7 +19,7 @@ const IndexPage = () => {
           </div>
         </div>
         <div className='col'>
-          <img alt='' src={profileImage} className='bio-img' />
+          <img alt='' src={profileImage} className={styles['bio-img']} />
         </div>
       </div>
     </MainContainer>

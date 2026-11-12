@@ -2,7 +2,7 @@
 import { BsCodeSlash, BsMusicNoteBeamed } from 'react-icons/bs';
 import { RiRunLine } from 'react-icons/ri';
 import MainContainer from '../components/layout/mainContainer';
-import '../styles/about.scss';
+import styles from './about.module.css';
 
 const AboutPage = () => {
   return (
@@ -25,8 +25,8 @@ const AboutPage = () => {
           </p>
         </div>
         <div className='col'>
-          <div className='flex__col justify-center'>
-            <div className='row justify-center icon-row'>
+          <div className='flex--col justify-center'>
+            <div className={`row justify-center ${styles['icon-row']}`}>
               <BsCodeSlash size='32' color='black' />
               <BsMusicNoteBeamed size='32' color='black' />
               <RiRunLine size='32' color='black' />

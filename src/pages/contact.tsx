@@ -22,13 +22,13 @@ const ContactPage = () => {
       <div className='row-md'>
         <div className='col'>
           <h1>Contact</h1>
-          <p className='mb-4'>
+          <p>
             Want to get in touch? Feel free to send me an email or message me at
             LinkedIn!
           </p>
         </div>
         <div className='col'>
-          <div className='flex__col'>
+          <div className='flex--col'>
             <ul>
               <IconListItem
                 href='mailto:hello@augustsjogren.com'
