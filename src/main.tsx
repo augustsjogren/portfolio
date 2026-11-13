@@ -9,7 +9,7 @@ const NotFoundPage = React.lazy(() => import('./pages/404'));
 const IndexPage = React.lazy(() => import('./pages/'));
 const AboutPage = React.lazy(() => import('./pages/about'));
 const ContactPage = React.lazy(() => import('./pages/contact'));
-const SkillsPage = React.lazy(() => import('./pages/skills'));
+const HowIWorkPage = React.lazy(() => import('./pages/how-i-work'));
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       { element: <IndexPage />, index: true },
       { path: 'about', element: <AboutPage /> },
-      { path: 'skills', element: <SkillsPage /> },
+      { path: 'how-i-work', element: <HowIWorkPage /> },
       { path: 'contact', element: <ContactPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],

@@ -15,7 +15,7 @@ export const NavBar = () => {
       <div className='navbar-links'>
         <HeaderLink to='/'>Home</HeaderLink>
         <HeaderLink to='about'>About</HeaderLink>
-        <HeaderLink to='skills'>Skills</HeaderLink>
+        <HeaderLink to='how-i-work'>How I work</HeaderLink>
         <HeaderLink to='contact'>Contact</HeaderLink>
       </div>
     </div>

@@ -26,8 +26,8 @@ test.describe('Pages Rendering', () => {
     await expect(page.locator('h1, h2')).toBeVisible();
   });
 
-  test('skills page should render with content', async ({ page }) => {
-    await page.goto('/skills');
+  test('how I work page should render with content', async ({ page }) => {
+    await page.goto('/how-i-work');
 
     // Skills page should have main content area
     await expect(page.locator('main, section, article')).toBeVisible();
@@ -49,13 +49,14 @@ test.describe('Pages Rendering', () => {
     await expect(page.getByText(/web-focused developer/i)).toBeVisible();
   });
 
-  test('skills page states the tools philosophy', async ({ page }) => {
-    await page.goto('/skills');
+  test('how I work page lists working principles', async ({ page }) => {
+    await page.goto('/how-i-work');
 
     await expect(
-      page.getByRole('heading', { name: /tools change/i })
+      page.getByRole('heading', { name: /the stack changes/i })
     ).toBeVisible();
-    await expect(page.getByText(/agentic coding/i)).toBeVisible();
+    await expect(page.locator('.principle')).toHaveCount(4);
+    await expect(page.getByText(/agents type/i)).toBeVisible();
   });
 
   test('contact page offers email, LinkedIn and GitHub chips', async ({
@@ -99,7 +100,7 @@ test.describe('Pages Rendering', () => {
     // Visit all pages
     await page.goto('/');
     await page.getByRole('link', { name: /about/i }).click();
-    await page.getByRole('link', { name: /skills/i }).click();
+    await page.getByRole('link', { name: /how i work/i }).click();
     await page.getByRole('link', { name: /contact/i }).click();
 
     expect(consoleErrors).toHaveLength(0);
