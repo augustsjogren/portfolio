@@ -6,9 +6,10 @@
   padding: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 2px solid black;
+  border: 1px solid var(--hairline);
   border-radius: 50px;
-  color: #000000;
+  background: var(--panel);
+  color: var(--ink);
 
   @media (max-width: layout.$bp-medium) {
     padding: 10px;

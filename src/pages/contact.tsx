@@ -12,7 +12,7 @@ const iconStyle: CSSProperties = {
   marginRight: '15px',
   height: '24px',
   width: '24px',
-  color: 'black',
+  color: 'var(--accent)',
 };
 
 const ContactPage = () => {
