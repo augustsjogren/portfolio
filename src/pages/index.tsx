@@ -1,10 +1,9 @@
-import React from 'react';
 import profileImage from '../images/Aggebagge_web.webp';
 import styles from './landing.module.css';
 
 const IndexPage = () => {
   return (
-    <div className={styles["landing"]}>
+    <div className={styles.landing}>
       <title>Home</title>
 
       <section className={styles["landing-hero"]}>
@@ -36,19 +35,19 @@ const IndexPage = () => {
         </p>
         <ul className={styles["landing-now-list"]}>
           <li>
-            <span className={styles["dot"]} />
+            <span className={styles.dot} />
             <span>
               <b>Making:</b> a track that refuses to leave the 8-bar loop stage
             </span>
           </li>
           <li>
-            <span className={styles["dot"]} />
+            <span className={styles.dot} />
             <span>
               <b>Running:</b> chasing a sub-20 5k before winter
             </span>
           </li>
           <li>
-            <span className={styles["dot"]} />
+            <span className={styles.dot} />
             <span>
               <b>Building:</b> a small web app nobody asked for (someone always
               asks)
@@ -68,7 +67,7 @@ const IndexPage = () => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            GitHub <span className={styles["arr"]}>→</span>
+            GitHub <span className={styles.arr}>→</span>
           </a>
           <a
             className={styles["landing-chip"]}
@@ -76,13 +75,13 @@ const IndexPage = () => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            LinkedIn <span className={styles["arr"]}>→</span>
+            LinkedIn <span className={styles.arr}>→</span>
           </a>
           <a
             className={[styles["landing-chip"], styles["landing-chip-mail"]].join(" ")}
             href='mailto:hello@augustsjogren.com'
           >
-            Say hi <span className={styles["arr"]}>→</span>
+            Say hi <span className={styles.arr}>→</span>
           </a>
         </div>
       </section>

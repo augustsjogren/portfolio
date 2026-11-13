@@ -1,10 +1,9 @@
-import React from 'react';
 import styles from './page.module.css';
 import landing from './landing.module.css';
 
 const AboutPage = () => {
   return (
-    <div className={styles["page"]}>
+    <div className={styles.page}>
       <title>About</title>
 
       <p className={styles["page-label"]}>About</p>

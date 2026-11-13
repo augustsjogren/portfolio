@@ -1,10 +1,9 @@
-import React from 'react';
 import styles from './page.module.css';
 import landing from './landing.module.css';
 
 const ContactPage = () => {
   return (
-    <div className={styles["page"]}>
+    <div className={styles.page}>
       <title>Contact</title>
 
       <p className={styles["page-label"]}>Contact</p>
@@ -19,7 +18,7 @@ const ContactPage = () => {
           className={[landing["landing-chip"], landing["landing-chip-mail"]].join(" ")}
           href='mailto:hello@augustsjogren.com'
         >
-          Say hi <span className={landing["arr"]}>→</span>
+          Say hi <span className={landing.arr}>→</span>
         </a>
         <a
           className={landing["landing-chip"]}
@@ -27,7 +26,7 @@ const ContactPage = () => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          LinkedIn <span className={landing["arr"]}>→</span>
+          LinkedIn <span className={landing.arr}>→</span>
         </a>
         <a
           className={landing["landing-chip"]}
@@ -35,7 +34,7 @@ const ContactPage = () => {
           target='_blank'
           rel='noopener noreferrer'
         >
-          GitHub <span className={landing["arr"]}>→</span>
+          GitHub <span className={landing.arr}>→</span>
         </a>
       </div>
 

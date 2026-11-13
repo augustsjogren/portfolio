@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './page.module.css';
 import landing from './landing.module.css';
 
@@ -23,7 +22,7 @@ const PRINCIPLES = [
 
 const HowIWorkPage = () => {
   return (
-    <div className={styles["page"]}>
+    <div className={styles.page}>
       <title>How I work</title>
 
       <p className={styles["page-label"]}>How I work</p>
@@ -36,9 +35,9 @@ const HowIWorkPage = () => {
         build things.
       </p>
 
-      <ul className={styles["principles"]}>
+      <ul className={styles.principles}>
         {PRINCIPLES.map((p) => (
-          <li key={p.title} className={styles["principle"]}>
+          <li key={p.title} className={styles.principle}>
             <h2>{p.title}</h2>
             <p>{p.body}</p>
           </li>

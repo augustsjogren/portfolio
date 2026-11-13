@@ -1,8 +1,7 @@
-import React from 'react';
 import styles from './page.module.css';
 
 const NotFoundPage = () => (
-  <div className={styles["page"]}>
+  <div className={styles.page}>
     <p className={styles["page-label"]}>404</p>
     <h1 className={styles["page-title"]}>Lost the trail.</h1>
     <p className={styles["page-lede"]}>
