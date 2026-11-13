@@ -9,13 +9,13 @@ const IndexPage = () => {
 
       <section className='landing-hero'>
         <div className='landing-hero-text'>
-          <p className='landing-hello'>Hej — I&apos;m August.</p>
+          <p className='landing-hello'>Hej! I&apos;m August.</p>
           <h1 className='landing-title'>
             Runner, beatmaker, <em className='landing-accent'>builder</em> of
             odd things.
           </h1>
           <p className='landing-lede'>
-            By day I build web apps — full stack, from idea to deploy. The rest
+            By day I build web apps: full stack, from idea to deploy. The rest
             of the time I&apos;m making <strong>music</strong>, chasing a faster{' '}
             <strong>5k</strong>, or taking something apart to see how it works.
           </p>
@@ -38,19 +38,19 @@ const IndexPage = () => {
           <li>
             <span className='dot' />
             <span>
-              <b>Making</b> — a track that refuses to leave the 8-bar loop stage
+              <b>Making:</b> a track that refuses to leave the 8-bar loop stage
             </span>
           </li>
           <li>
             <span className='dot' />
             <span>
-              <b>Running</b> — chasing a sub-20 5k before winter
+              <b>Running:</b> chasing a sub-20 5k before winter
             </span>
           </li>
           <li>
             <span className='dot' />
             <span>
-              <b>Building</b> — a small web app nobody asked for (someone always
+              <b>Building:</b> a small web app nobody asked for (someone always
               asks)
             </span>
           </li>

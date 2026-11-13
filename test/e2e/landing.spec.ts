@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Landing Page', () => {
   test('hero shows the greeting and headline', async ({ page }) => {
     await page.goto('/');
-    await expect(page.getByText(/Hej — I'm August/i)).toBeVisible();
+    await expect(page.getByText(/Hej! I'm August/i)).toBeVisible();
     await expect(
       page.getByRole('heading', { name: /runner, beatmaker/i })
     ).toBeVisible();

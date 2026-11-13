@@ -4,11 +4,11 @@ import '../styles/pages.scss';
 const PRINCIPLES = [
   {
     title: 'Own the whole problem.',
-    body: "Front end, back end, or wherever the path leads — I'd rather carry a feature from idea to deploy than hand it off at a boundary.",
+    body: "Front end, back end, or wherever the path leads. I'd rather carry a feature from idea to deploy than hand it off at a boundary.",
   },
   {
     title: 'Proof beats promises.',
-    body: "A feature isn't done when it looks right — it's done when it's tested. E2e tests keep everything honest.",
+    body: "A feature isn't done when it looks right. It's done when it's tested. E2e tests keep everything honest.",
   },
   {
     title: 'Agents type, I think.',
@@ -16,7 +16,7 @@ const PRINCIPLES = [
   },
   {
     title: 'Fundamentals compound.',
-    body: 'Tools come and go — judgment is the asset that appreciates. I learn whatever the task needs and let go of what it doesn’t.',
+    body: 'Tools come and go. Judgment is the asset that appreciates. I learn whatever the task needs and let go of what it doesn’t.',
   },
 ];
 
@@ -31,7 +31,7 @@ const HowIWorkPage = () => {
         doesn&apos;t.
       </h1>
       <p className='page-lede'>
-        No fixed tool list — here&apos;s what actually stays constant in how I
+        No fixed tool list. Here&apos;s what actually stays constant in how I
         build things.
       </p>
 

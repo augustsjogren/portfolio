@@ -11,7 +11,7 @@ const ContactPage = () => {
       <h1 className='page-title'>Get in touch.</h1>
       <p className='page-lede'>
         The fastest way to reach me is email. I&apos;m also on LinkedIn and
-        GitHub — say hi about code, music, or running.
+        GitHub. Say hi about code, music, or running.
       </p>
 
       <div className='landing-link-row'>
