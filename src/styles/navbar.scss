@@ -36,14 +36,16 @@
   }
 
   @media (max-width: 600px) {
-    padding: 1.2rem 1.25rem;
+    padding: 1.4rem 1.5rem;
 
     .navbar-links {
-      column-gap: 0.85rem;
+      width: 100%;
+      justify-content: space-between;
+      column-gap: 0.5rem;
     }
 
     .header-link {
-      font-size: 0.68rem;
+      font-size: 0.78rem;
       white-space: nowrap;
     }
   }
