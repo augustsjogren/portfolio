@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './styles/style.scss';
 import { Suspense } from 'react';
 import Layout from './components/layout';
+const NotFoundPage = React.lazy(() => import('./pages/404'));
 const IndexPage = React.lazy(() => import('./pages/'));
 const AboutPage = React.lazy(() => import('./pages/about'));
 const ContactPage = React.lazy(() => import('./pages/contact'));
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: 'about', element: <AboutPage /> },
       { path: 'skills', element: <SkillsPage /> },
       { path: 'contact', element: <ContactPage /> },
+      { path: '*', element: <NotFoundPage /> },
     ],
   },
 ]);

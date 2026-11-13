@@ -2,9 +2,6 @@ import React from 'react';
 import profileImage from '../images/Aggebagge_web.webp';
 import '../styles/landing.scss';
 
-const SQUIGGLE_PATH =
-  'M2 12 C 20 4, 40 18, 60 10 S 100 4, 120 12 S 160 18, 198 8';
-
 const IndexPage = () => {
   return (
     <div className='landing'>
@@ -14,24 +11,8 @@ const IndexPage = () => {
         <div className='landing-hero-text'>
           <p className='landing-hello'>Hej — I&apos;m August.</p>
           <h1 className='landing-title'>
-            Runner, beatmaker,{' '}
-            <em className='landing-squiggle'>
-              builder
-              <svg
-                viewBox='0 0 200 20'
-                fill='none'
-                preserveAspectRatio='none'
-                aria-hidden='true'
-              >
-                <path
-                  d={SQUIGGLE_PATH}
-                  stroke='currentColor'
-                  strokeWidth='4'
-                  strokeLinecap='round'
-                />
-              </svg>
-            </em>{' '}
-            of odd things.
+            Runner, beatmaker, <em className='landing-accent'>builder</em> of
+            odd things.
           </h1>
           <p className='landing-lede'>
             By day I build web apps — full stack, from idea to deploy. The rest

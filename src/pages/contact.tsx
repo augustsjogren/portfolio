@@ -1,59 +1,49 @@
-import React, { CSSProperties } from 'react';
-import {
-  FaEnvelope,
-  FaGithub,
-  FaLinkedin,
-  FaMapMarkerAlt,
-} from 'react-icons/fa';
-import MainContainer from '../components/layout/mainContainer';
-import { IconListItem } from '../components/IconListItem';
-
-const iconStyle: CSSProperties = {
-  marginRight: '15px',
-  height: '24px',
-  width: '24px',
-  color: 'var(--accent)',
-};
+import React from 'react';
+import '../styles/pages.scss';
+import '../styles/landing.scss';
 
 const ContactPage = () => {
   return (
-    <MainContainer>
+    <div className='page'>
       <title>Contact</title>
-      <div className='row-md'>
-        <div className='col'>
-          <h1>Contact</h1>
-          <p className='mb-4'>
-            Want to get in touch? Feel free to send me an email or message me at
-            LinkedIn!
-          </p>
-        </div>
-        <div className='col'>
-          <div className='flex__col'>
-            <ul>
-              <IconListItem
-                href='mailto:hello@augustsjogren.com'
-                text='hello@augustsjogren.com'
-                icon={<FaEnvelope style={iconStyle} />}
-              />
-              <IconListItem
-                href='https://www.linkedin.com/in/august-sjogren'
-                text='linkedin.com/in/august-sjogren'
-                icon={<FaLinkedin style={iconStyle} />}
-              />
-              <IconListItem
-                href='https://github.com/augustsjogren'
-                text='github.com/augustsjogren'
-                icon={<FaGithub style={iconStyle} />}
-              />
-              <IconListItem
-                text='Malmö, Sweden'
-                icon={<FaMapMarkerAlt style={iconStyle} />}
-              />
-            </ul>
-          </div>
-        </div>
+
+      <p className='page-label'>Contact</p>
+      <h1 className='page-title'>Get in touch.</h1>
+      <p className='page-lede'>
+        The fastest way to reach me is email. I&apos;m also on LinkedIn and
+        GitHub — say hi about code, music, or running.
+      </p>
+
+      <div className='landing-link-row'>
+        <a
+          className='landing-chip landing-chip-mail'
+          href='mailto:hello@augustsjogren.com'
+        >
+          Say hi <span className='arr'>→</span>
+        </a>
+        <a
+          className='landing-chip'
+          href='https://www.linkedin.com/in/august-sjogren'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          LinkedIn <span className='arr'>→</span>
+        </a>
+        <a
+          className='landing-chip'
+          href='https://github.com/augustsjogren'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          GitHub <span className='arr'>→</span>
+        </a>
       </div>
-    </MainContainer>
+
+      <div className='page-footer'>
+        <span>© August Sjögren</span>
+        <span>Malmö, SE</span>
+      </div>
+    </div>
   );
 };
 

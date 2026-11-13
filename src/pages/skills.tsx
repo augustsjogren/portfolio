@@ -1,6 +1,6 @@
 import React from 'react';
-import MainContainer from '../components/layout/mainContainer';
 import SkillTag from '../components/skillTag';
+import '../styles/pages.scss';
 import '../styles/skills.scss';
 import { useSkills } from '../hooks/useSkills';
 
@@ -8,29 +8,29 @@ const SkillsPage = () => {
   const { skills } = useSkills();
 
   return (
-    <MainContainer>
+    <div className='page'>
       <title>Skills</title>
-      <div className='row-md'>
-        <div className='col'>
-          <h1>Skills</h1>
-          <p>
-            Here&apos;s a mix of my go-to tech skills in no particular order,
-            just a collection of things I love working with! I&apos;m always
-            eager to try out new tools and technologies because, to me, half the
-            fun of coding is learning something new.
-          </p>
-        </div>
-        <div className='col'>
-          <div className='flex center skill-list'>
-            <div>
-              {skills.map((skill, index) => (
-                <SkillTag key={index} content={skill} />
-              ))}
-            </div>
-          </div>
+
+      <p className='page-label'>Skills</p>
+      <h1 className='page-title'>Tools I reach for.</h1>
+      <p className='page-lede'>
+        A mix of my go-to tech, in no particular order. I&apos;m always eager to
+        try new tools — half the fun of coding is learning something new.
+      </p>
+
+      <div className='flex justify-center skill-list'>
+        <div>
+          {skills.map((skill, index) => (
+            <SkillTag key={index} content={skill} />
+          ))}
         </div>
       </div>
-    </MainContainer>
+
+      <div className='page-footer'>
+        <span>© August Sjögren</span>
+        <span>Malmö, SE</span>
+      </div>
+    </div>
   );
 };
 

@@ -6,12 +6,11 @@ test.describe('404 Page Handling', () => {
 
     // 404 page should either redirect to home or display 404 content
     const isHomePage = page.url().endsWith('/');
-    const hasErrorMessage = await page
-      .locator('text=/404|not found|page not found/i')
-      .isVisible({ timeout: 1000 })
-      .catch(() => false);
-
-    expect(isHomePage || hasErrorMessage).toBeTruthy();
+    if (!isHomePage) {
+      await expect(
+        page.getByText(/404|not found|page not found/i).first()
+      ).toBeVisible();
+    }
   });
 
   test('should allow navigation from invalid route', async ({ page }) => {
