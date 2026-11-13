@@ -41,4 +41,23 @@
       text-decoration: none;
     }
   }
+
+  @media (max-width: 600px) {
+    padding: 1.2rem 1.25rem;
+
+    .navbar-brand {
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+      flex: none;
+    }
+
+    .navbar-links {
+      column-gap: 0.85rem;
+    }
+
+    .header-link {
+      font-size: 0.68rem;
+      white-space: nowrap;
+    }
+  }
 }
