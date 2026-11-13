@@ -49,11 +49,13 @@ a:hover {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
+  /* biome-ignore lint/suspicious/noDuplicateProperties: fallback for browsers without `underline dotted` */
   text-decoration: underline dotted;
 }
 b,
 strong {
   font-weight: inherit;
+  /* biome-ignore lint/suspicious/noDuplicateProperties: fallback for browsers without `bolder` */
   font-weight: bolder;
 }
 dfn {
@@ -479,7 +481,8 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
+  font-family:
+    'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;

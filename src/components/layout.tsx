@@ -1,12 +1,11 @@
-import React from 'react';
+
 import Header from './header';
 import './layout.css';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
   return (
-    <>
-      <div
+    <div
         style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}
       >
         <Header />
@@ -14,7 +13,6 @@ const Layout = () => {
           <Outlet />
         </main>
       </div>
-    </>
   );
 };
 

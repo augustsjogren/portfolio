@@ -1,0 +1,28 @@
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.6rem 2rem;
+}
+
+.navbar-links {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+
+  column-gap: 1.6rem;
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    padding: 1.4rem 1.5rem;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+  }
+}

@@ -1,8 +1,9 @@
-@use 'reset';
-@use 'typography';
-@use 'layout';
+@import './reset.css';
+@import './typography.css';
+@import './layout.css';
 
 /*--- Design tokens (graphite theme) ---*/
+
 :root {
   --bg: #17181a;
   --panel: #1f2124;
@@ -15,9 +16,10 @@
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
+/*--- Base ---*/
+
 html,
-body,
-.row ul {
+body {
   margin: 0;
 }
 
@@ -27,12 +29,10 @@ body {
   min-height: 100vh;
 }
 
-* {
-  &:focus-visible {
-    outline-color: var(--accent);
-    outline-offset: 4px;
-    outline-style: solid;
-    outline-width: 2px;
-    border-radius: 4px;
-  }
+*:focus-visible {
+  outline-color: var(--accent);
+  outline-offset: 4px;
+  outline-style: solid;
+  outline-width: 2px;
+  border-radius: 4px;
 }

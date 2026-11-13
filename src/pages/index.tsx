@@ -1,54 +1,54 @@
 import React from 'react';
 import profileImage from '../images/Aggebagge_web.webp';
-import '../styles/landing.scss';
+import styles from './landing.module.css';
 
 const IndexPage = () => {
   return (
-    <div className='landing'>
+    <div className={styles["landing"]}>
       <title>Home</title>
 
-      <section className='landing-hero'>
-        <div className='landing-hero-text'>
-          <p className='landing-hello'>Hej! I&apos;m August.</p>
-          <h1 className='landing-title'>
-            Runner, beatmaker, <em className='landing-accent'>builder</em> of
+      <section className={styles["landing-hero"]}>
+        <div className={styles["landing-hero-text"]}>
+          <p className={styles["landing-hello"]}>Hej! I&apos;m August.</p>
+          <h1 className={styles["landing-title"]}>
+            Runner, beatmaker, <em className={styles["landing-accent"]}>builder</em> of
             odd things.
           </h1>
-          <p className='landing-lede'>
+          <p className={styles["landing-lede"]}>
             By day I build web apps: full stack, from idea to deploy. The rest
             of the time I&apos;m making <strong>music</strong>, chasing a faster{' '}
             <strong>5k</strong>, or taking something apart to see how it works.
           </p>
         </div>
-        <div className='landing-portrait-wrap'>
+        <div className={styles["landing-portrait-wrap"]}>
           <img
-            className='landing-portrait'
+            className={styles["landing-portrait"]}
             src={profileImage}
             alt='Portrait of August'
           />
-          <span className='landing-sticker'>Malmö, SE</span>
+          <span className={styles["landing-sticker"]}>Malmö, SE</span>
         </div>
       </section>
 
-      <section className='landing-section' aria-labelledby='now-heading'>
-        <p className='landing-section-label' id='now-heading'>
+      <section className={styles["landing-section"]} aria-labelledby='now-heading'>
+        <p className={styles["landing-section-label"]} id='now-heading'>
           Currently
         </p>
-        <ul className='landing-now-list'>
+        <ul className={styles["landing-now-list"]}>
           <li>
-            <span className='dot' />
+            <span className={styles["dot"]} />
             <span>
               <b>Making:</b> a track that refuses to leave the 8-bar loop stage
             </span>
           </li>
           <li>
-            <span className='dot' />
+            <span className={styles["dot"]} />
             <span>
               <b>Running:</b> chasing a sub-20 5k before winter
             </span>
           </li>
           <li>
-            <span className='dot' />
+            <span className={styles["dot"]} />
             <span>
               <b>Building:</b> a small web app nobody asked for (someone always
               asks)
@@ -57,37 +57,37 @@ const IndexPage = () => {
         </ul>
       </section>
 
-      <section className='landing-section' aria-labelledby='links-heading'>
-        <p className='landing-section-label' id='links-heading'>
+      <section className={styles["landing-section"]} aria-labelledby='links-heading'>
+        <p className={styles["landing-section-label"]} id='links-heading'>
           Find me
         </p>
-        <div className='landing-link-row'>
+        <div className={styles["landing-link-row"]}>
           <a
-            className='landing-chip'
+            className={styles["landing-chip"]}
             href='https://github.com/augustsjogren'
             target='_blank'
             rel='noopener noreferrer'
           >
-            GitHub <span className='arr'>→</span>
+            GitHub <span className={styles["arr"]}>→</span>
           </a>
           <a
-            className='landing-chip'
+            className={styles["landing-chip"]}
             href='https://www.linkedin.com/in/august-sjogren'
             target='_blank'
             rel='noopener noreferrer'
           >
-            LinkedIn <span className='arr'>→</span>
+            LinkedIn <span className={styles["arr"]}>→</span>
           </a>
           <a
-            className='landing-chip landing-chip-mail'
+            className={[styles["landing-chip"], styles["landing-chip-mail"]].join(" ")}
             href='mailto:hello@augustsjogren.com'
           >
-            Say hi <span className='arr'>→</span>
+            Say hi <span className={styles["arr"]}>→</span>
           </a>
         </div>
       </section>
 
-      <footer className='landing-footer'>
+      <footer className={styles["landing-footer"]}>
         <span>© August Sjögren</span>
         <span>built with too much coffee</span>
       </footer>

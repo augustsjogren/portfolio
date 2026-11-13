@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/pages.scss';
+import styles from './page.module.css';
+import landing from './landing.module.css';
 
 const PRINCIPLES = [
   {
@@ -22,29 +23,29 @@ const PRINCIPLES = [
 
 const HowIWorkPage = () => {
   return (
-    <div className='page'>
+    <div className={styles["page"]}>
       <title>How I work</title>
 
-      <p className='page-label'>How I work</p>
-      <h1 className='page-title'>
-        The stack changes. <em className='landing-accent'>This</em>{' '}
+      <p className={styles["page-label"]}>How I work</p>
+      <h1 className={styles["page-title"]}>
+        The stack changes. <em className={landing["landing-accent"]}>This</em>{' '}
         doesn&apos;t.
       </h1>
-      <p className='page-lede'>
+      <p className={styles["page-lede"]}>
         No fixed tool list. Here&apos;s what actually stays constant in how I
         build things.
       </p>
 
-      <ul className='principles'>
+      <ul className={styles["principles"]}>
         {PRINCIPLES.map((p) => (
-          <li key={p.title} className='principle'>
+          <li key={p.title} className={styles["principle"]}>
             <h2>{p.title}</h2>
             <p>{p.body}</p>
           </li>
         ))}
       </ul>
 
-      <div className='page-footer'>
+      <div className={styles["page-footer"]}>
         <span>© August Sjögren</span>
         <span>Malmö, SE</span>
       </div>

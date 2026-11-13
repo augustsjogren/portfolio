@@ -44,11 +44,11 @@
   font-size: 1.19rem;
   color: var(--muted);
   max-width: 44ch;
+}
 
-  strong {
-    color: var(--ink);
-    font-weight: 600;
-  }
+.landing-lede strong {
+  color: var(--ink);
+  font-weight: 600;
 }
 
 .landing-portrait-wrap {
@@ -105,39 +105,39 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
 
-  li {
-    display: flex;
-    gap: 0.9rem;
-    align-items: baseline;
-    font-size: 1.06rem;
-    color: var(--muted);
-    padding: 0;
-  }
+.landing-now-list li {
+  display: flex;
+  gap: 0.9rem;
+  align-items: baseline;
+  font-size: 1.06rem;
+  color: var(--muted);
+  padding: 0;
+}
 
-  b {
-    color: var(--ink);
-    font-weight: 600;
-  }
+.landing-now-list b {
+  color: var(--ink);
+  font-weight: 600;
+}
 
-  .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent);
-    flex: none;
-    position: relative;
-    top: -2px;
-    display: block;
-  }
+.landing-now-list .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+  position: relative;
+  top: -2px;
+  display: block;
+}
 
-  li:nth-child(2) .dot {
-    animation: landing-pulse 2.4s ease infinite 0.3s;
-  }
+.landing-now-list li:nth-child(2) .dot {
+  animation: landing-pulse 2.4s ease infinite 0.3s;
+}
 
-  li:nth-child(3) .dot {
-    animation: landing-pulse 2.4s ease infinite 0.6s;
-  }
+.landing-now-list li:nth-child(3) .dot {
+  animation: landing-pulse 2.4s ease infinite 0.6s;
 }
 
 /* --- Link chips --- */
@@ -166,33 +166,33 @@
     border-color 0.2s ease,
     background 0.2s ease,
     color 0.2s ease;
+}
 
-  .arr {
-    color: var(--muted);
-    font-weight: 400;
-    transition:
-      color 0.2s ease,
-      transform 0.2s ease;
-  }
+.landing-chip .arr {
+  color: var(--muted);
+  font-weight: 400;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
 
-  &:hover {
-    transform: translateY(-3px) rotate(-1deg);
-    border-color: var(--accent);
-  }
+.landing-chip:hover {
+  transform: translateY(-3px) rotate(-1deg);
+  border-color: var(--accent);
+}
 
-  &:hover .arr {
-    color: var(--accent);
-    transform: translateX(3px);
-  }
+.landing-chip:hover .arr {
+  color: var(--accent);
+  transform: translateX(3px);
+}
 
-  &.landing-chip-mail:hover {
-    background: var(--accent);
-    color: var(--bg);
+.landing-chip-mail:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
 
-    .arr {
-      color: var(--bg);
-    }
-  }
+.landing-chip-mail:hover .arr {
+  color: var(--bg);
 }
 
 /* --- Footer --- */
@@ -227,14 +227,6 @@
   .landing * {
     transition: none !important;
     animation: none !important;
-  }
-
-  .landing-sticker {
-    transform: none;
-  }
-
-  .landing-chip:hover {
-    transform: none;
   }
 }
 

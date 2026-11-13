@@ -3,45 +3,40 @@
   "private": true,
   "description": "",
   "version": "0.1.0",
-  "author": "August Sjögren <hello@augustsjogren.com>",
+  "author": "August Sj\u00f6gren <hello@augustsjogren.com>",
   "type": "module",
   "dependencies": {
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.2",
-    "sass": "^1.98.0"
+    "react-router-dom": "^7.13.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.5",
-    "@eslint/js": "^9.21.0",
+    "@biomejs/biome": "^2.6.7",
     "@playwright/test": "^1.58.2",
-    "@types/node": "^24.12.0",
+    "@types/node": "^22.20.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@typescript-eslint/eslint-plugin": "^8.57.2",
-    "@typescript-eslint/parser": "^8.57.2",
-    "eslint": "^9.39.4",
-    "eslint-plugin-react": "^7.37.5",
-    "globals": "^16.5.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.6.0",
     "prettier": "^3.8.1",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1"
+    "typescript": "^6.0.3",
+    "vite": "^8.3.8"
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint": "eslint ./src/",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome lint --write ./src",
     "test": "echo \"No unit tests configured yet\"",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:debug": "playwright test --debug"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint --fix",
-    "**/*.{js,jsx,ts,tsx,json,md}": "prettier --write"
+    "src/**/*.{js,jsx,ts,tsx}": "biome lint --write",
+    "**/*.{js,jsx,ts,tsx,json,md}": "prettier --write",
+    "**/*.css": "prettier --write"
   }
 }

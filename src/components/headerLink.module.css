@@ -1,0 +1,26 @@
+.header-link {
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  transition: color 0.15s ease;
+}
+
+.header-link:hover {
+  color: var(--accent);
+}
+
+.header-link.active {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .header-link {
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+}
