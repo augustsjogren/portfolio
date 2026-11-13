@@ -1,30 +1,21 @@
 import React from 'react';
-import SkillTag from '../components/skillTag';
 import '../styles/pages.scss';
-import '../styles/skills.scss';
-import { useSkills } from '../hooks/useSkills';
 
 const SkillsPage = () => {
-  const { skills } = useSkills();
-
   return (
     <div className='page'>
       <title>Skills</title>
 
       <p className='page-label'>Skills</p>
-      <h1 className='page-title'>Tools I reach for.</h1>
+      <h1 className='page-title'>
+        Tools change. <em className='landing-accent'>Fundamentals</em>{' '}
+        don&apos;t.
+      </h1>
       <p className='page-lede'>
-        A mix of my go-to tech, in no particular order. I&apos;m always eager to
-        try new tools — half the fun of coding is learning something new.
+        I&apos;ve stopped keeping a fixed list of technologies. In the age of
+        agentic coding, deep tool lists age fast — I stay sharp on the
+        fundamentals and pick up whatever the job needs.
       </p>
-
-      <div className='flex justify-center skill-list'>
-        <div>
-          {skills.map((skill, index) => (
-            <SkillTag key={index} content={skill} />
-          ))}
-        </div>
-      </div>
 
       <div className='page-footer'>
         <span>© August Sjögren</span>

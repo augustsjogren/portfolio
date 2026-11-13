@@ -40,21 +40,22 @@ test.describe('Pages Rendering', () => {
     await expect(page.locator('main, section, article')).toBeVisible();
   });
 
-  test('about page shows heading and interests icons', async ({ page }) => {
+  test('about page shows heading and body copy', async ({ page }) => {
     await page.goto('/about');
 
     await expect(
       page.getByRole('heading', { name: /code by day/i })
     ).toBeVisible();
-    await expect(page.locator('.icon-row svg')).toHaveCount(3);
+    await expect(page.getByText(/web-focused developer/i)).toBeVisible();
   });
 
-  test('skills page shows skill tags', async ({ page }) => {
+  test('skills page states the tools philosophy', async ({ page }) => {
     await page.goto('/skills');
 
-    await expect(page.locator('.skill-tag').first()).toBeVisible();
-    const count = await page.locator('.skill-tag').count();
-    expect(count).toBeGreaterThan(5);
+    await expect(
+      page.getByRole('heading', { name: /tools change/i })
+    ).toBeVisible();
+    await expect(page.getByText(/agentic coding/i)).toBeVisible();
   });
 
   test('contact page offers email, LinkedIn and GitHub chips', async ({

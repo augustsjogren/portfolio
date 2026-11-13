@@ -1,8 +1,5 @@
 import React from 'react';
-import { BsCodeSlash, BsMusicNoteBeamed } from 'react-icons/bs';
-import { RiRunLine } from 'react-icons/ri';
 import '../styles/pages.scss';
-import '../styles/about.scss';
 
 const AboutPage = () => {
   return (
@@ -27,12 +24,6 @@ const AboutPage = () => {
           new sport. Staying active is a big part of my daily routine, and I
           love the challenge of trying out different activities.
         </p>
-      </div>
-
-      <div className='row justify-center icon-row' aria-hidden='true'>
-        <BsCodeSlash size={34} />
-        <BsMusicNoteBeamed size={34} />
-        <RiRunLine size={34} />
       </div>
 
       <div className='page-footer'>
