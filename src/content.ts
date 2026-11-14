@@ -100,15 +100,15 @@ export const howIWork = {
   principles: [
     {
       title: 'Own the whole problem.',
-      body: "Front end, back end, or wherever it leads. I'd rather carry a feature from idea to deploy than hand it off at a boundary.",
+      body: "Front end, back end, or wherever it leads. I'd rather carry a feature from idea to deploy than only focus on a narrow part of it.",
     },
     {
       title: 'Agents type, I think.',
       body: 'I work fully agentic: agents do the heavy lifting, I stay the architect. I review, understand and stand behind everything before it ships.',
     },
     {
-      title: 'Fundamentals compound.',
-      body: 'Tools come and go. Judgment sticks. I learn what the task needs and let go of the rest.',
+      title: 'Communication compounds.',
+      body: "Explaining a trade-off, writing what people will actually read, hearing what a client means instead of what they say. It's the half of the job that makes the code land.",
     },
   ],
 };
