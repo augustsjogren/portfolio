@@ -55,7 +55,7 @@ test.describe('Pages Rendering', () => {
     await expect(
       page.getByRole('heading', { name: /the stack changes/i })
     ).toBeVisible();
-    await expect(page.locator('.principle')).toHaveCount(4);
+    await expect(page.getByRole('listitem')).toHaveCount(4);
     await expect(page.getByText(/agents type/i)).toBeVisible();
   });
 
@@ -84,9 +84,11 @@ test.describe('Pages Rendering', () => {
     await page.goto('/no-such-page');
 
     await expect(page.getByText('404')).toBeVisible();
-    await expect(
-      page.locator('.page-lede').getByRole('link', { name: /home/i })
-    ).toBeVisible();
+    const homeLink = page.getByRole('main').getByRole('link', {
+      name: /home/i,
+    });
+    await expect(homeLink).toBeVisible();
+    await expect(homeLink).toHaveAttribute('href', '/');
   });
 
   test('all pages should load without console errors', async ({ page }) => {

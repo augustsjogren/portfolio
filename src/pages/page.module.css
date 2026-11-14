@@ -71,7 +71,7 @@
   margin: 0 0 0.5rem;
 }
 
-.principles p {
+.principles .principle p {
   font-size: 1.02rem;
   color: var(--muted);
   margin: 0;

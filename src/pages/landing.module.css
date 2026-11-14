@@ -225,7 +225,9 @@
 
 @media (prefers-reduced-motion: reduce) {
   .landing * {
+    /* biome-ignore lint/complexity/noImportantStyles: accessibility reset must beat higher-specificity animation rules above */
     transition: none !important;
+    /* biome-ignore lint/complexity/noImportantStyles: accessibility reset must beat higher-specificity animation rules above */
     animation: none !important;
   }
 }
