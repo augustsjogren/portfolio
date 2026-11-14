@@ -43,6 +43,24 @@ test.describe('Pages Rendering', () => {
     await expect(page.getByText(/agents type/i)).toBeVisible();
   });
 
+  test('how I work page shows current stack tags', async ({ page }) => {
+    await page.goto('/how-i-work');
+
+    await expect(page.getByText(/the stack, right now/i)).toBeVisible();
+    for (const tool of [
+      'TypeScript',
+      'React',
+      'Node',
+      'Azure',
+      'Rust',
+      'Claude Code',
+    ]) {
+      await expect(
+        page.getByText(tool, { exact: true }).last()
+      ).toBeVisible();
+    }
+  });
+
   test('contact page offers email, LinkedIn and GitHub chips', async ({
     page,
   }) => {

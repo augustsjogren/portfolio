@@ -23,6 +23,15 @@ const HowIWorkPage = () => {
         ))}
       </ul>
 
+      <p className={styles['tools-label']}>{howIWork.toolsLabel}</p>
+      <div className={styles['tools-row']}>
+        {howIWork.tools.map((tool) => (
+          <span key={tool} className={styles['tools-tag']}>
+            {tool}
+          </span>
+        ))}
+      </div>
+
       <PageFooter />
     </div>
   );

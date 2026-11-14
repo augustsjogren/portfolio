@@ -88,6 +88,18 @@ export const howIWork = {
     { text: " don't." },
   ] satisfies HeadingPart[],
   lede: 'No fixed tool list. This is what stays constant.',
+  toolsLabel: 'The stack, right now',
+  tools: [
+    'TypeScript',
+    'React',
+    'Node',
+    'Azure',
+    'Rust',
+    'Claude Code',
+    'Cursor',
+    'Pi',
+    'Local models',
+  ],
   principles: [
     {
       title: 'Own the whole problem.',
