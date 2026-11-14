@@ -94,11 +94,8 @@ export const howIWork = {
     'React',
     'Node',
     'Azure',
-    'Rust',
     'Claude Code',
     'Cursor',
-    'Pi',
-    'Local models',
   ],
   principles: [
     {

@@ -79,6 +79,9 @@
   border-radius: 999px;
   transform: rotate(6deg);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* --- Sections (Currently / Find me) --- */
