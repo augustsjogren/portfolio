@@ -16,21 +16,21 @@ August's personal portfolio site, deployed on Cloudflare Pages.
 src/
 ├── components/        # Shared components (navBar, layout, header, ...)
 │   └── layout/        # Layout sub-components (mainContainer)
-├── pages/             # One component per route
-├── hooks/             # Shared hooks (e.g. useSkills)
-├── styles/            # Sass: one file per page/component + _partials
+├── pages/             # One component per route (CSS Modules per page)
+├── styles/            # Plain CSS: reset, global, typography, layout
 └── images/            # Static assets (imported via Vite)
 test/
 └── e2e/               # Playwright end-to-end tests
     ├── navigation.spec.ts   # Route/navigation tests
     ├── pages.spec.ts        # Feature/rendering tests
+    ├── landing.spec.ts      # Landing page tests
     ├── 404.spec.ts          # Error handling tests
     └── helpers.ts           # Shared test utilities
 ```
 
 ## Routes
 
-Defined in `src/main.tsx`: `/` (home), `/about`, `/skills`, `/contact`, plus a 404 page.
+Defined in `src/main.tsx`: `/` (home), `/about`, `/how-i-work`, `/contact`, plus a 404 page.
 
 ## Commands
 

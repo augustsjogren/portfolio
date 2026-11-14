@@ -13,10 +13,10 @@ test.describe('Navigation', () => {
     await expect(page.locator('h1')).toBeVisible();
   });
 
-  test('should navigate to skills page', async ({ page }) => {
+  test('should navigate to how I work page', async ({ page }) => {
     await page.goto('/');
-    await page.getByRole('link', { name: /skills/i }).click();
-    await expect(page).toHaveURL('/skills');
+    await page.getByRole('link', { name: /how i work/i }).click();
+    await expect(page).toHaveURL('/how-i-work');
   });
 
   test('should navigate to contact page', async ({ page }) => {
@@ -30,9 +30,9 @@ test.describe('Navigation', () => {
     await page.goto('/about');
     await expect(page).toHaveURL('/about');
 
-    // Navigate to skills
-    await page.getByRole('link', { name: /skills/i }).click();
-    await expect(page).toHaveURL('/skills');
+    // Navigate to how I work
+    await page.getByRole('link', { name: /how i work/i }).click();
+    await expect(page).toHaveURL('/how-i-work');
 
     // Navigate to contact
     await page.getByRole('link', { name: /contact/i }).click();
