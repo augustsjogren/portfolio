@@ -48,9 +48,15 @@ test.describe('Pages Rendering', () => {
   }) => {
     await page.goto('/contact');
 
-    const mail = page.getByRole('link', { name: /email/i });
+    const mail = page.getByRole('link', { name: /email/i }).first();
     await expect(mail).toBeVisible();
     await expect(mail).toHaveAttribute('href', /^mailto:/);
+
+    const address = page.getByRole('link', {
+      name: /hello@augustsjogren\.com/i,
+    });
+    await expect(address).toBeVisible();
+    await expect(address).toHaveAttribute('href', /^mailto:/);
 
     await expect(page.getByRole('link', { name: /linkedin/i })).toHaveAttribute(
       'href',

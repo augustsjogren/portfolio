@@ -14,6 +14,9 @@ const ContactPage = () => {
         <Heading parts={contact.heading} />
       </h1>
       <p className={styles['page-lede']}>{contact.lede}</p>
+      <p className={styles['page-email']}>
+        <a href={`mailto:${contact.email}`}>{contact.email}</a>
+      </p>
 
       <LinkChips links={contact.links} />
 

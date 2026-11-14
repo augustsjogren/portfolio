@@ -70,7 +70,7 @@ export const home = {
     {
       label: 'Home lab',
       text: [
-        { text: 'self-hosting my own services and running local models, quants and all' },
+        { text: 'self-hosting my own services and running local AI models' },
       ],
     },
     {
@@ -108,6 +108,7 @@ export const contact = {
   title: 'Contact',
   heading: [{ text: 'Get in touch.' }] satisfies HeadingPart[],
   lede: "Email is fastest. I'm also on LinkedIn and GitHub.",
+  email: site.email,
   links,
 };
 
