@@ -50,16 +50,17 @@ export const home = {
     {
       label: 'Work',
       text: [
-        { text: 'Software Engineer (consultant) at ' },
+        { text: 'Software Engineer at ' },
         { text: 'Mpya Digital', href: 'https://www.mpyadigital.com', external: true },
       ],
     },
     {
-      label: 'Building',
+      label: 'For fun',
       text: [
+        { text: 'Building ' },
         { text: 'chef', href: 'https://github.com/augustsjogren/chef', external: true },
         {
-          text: ', a Rust TUI that keeps agent skills in one place and links them into your coding tools',
+          text: ', a Rust TUI that keeps agent skills synced between harnesses',
         },
       ],
     },
