@@ -31,19 +31,23 @@ const IndexPage = () => {
         <p className={styles['landing-section-label']}>Currently</p>
         <ul className={styles['landing-now-list']}>
           {home.currently.map((item) => (
-            <li key={item.label + item.text}>
+            <li key={item.label + item.text[0].text}>
               <span className={styles.dot} />
               <span>
                 <b>{item.label}:</b>{' '}
-                {item.href ? (
-                  <>
-                    <a href={item.href} target="_blank" rel="noreferrer">
-                      {item.hrefLabel}
+                {item.text.map((part) =>
+                  part.href ? (
+                    <a
+                      key={part.text}
+                      href={part.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {part.text}
                     </a>
-                    , {item.text}
-                  </>
-                ) : (
-                  item.text
+                  ) : (
+                    <span key={part.text}>{part.text}</span>
+                  ),
                 )}
               </span>
             </li>

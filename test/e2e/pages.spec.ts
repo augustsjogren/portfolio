@@ -46,7 +46,8 @@ test.describe('Pages Rendering', () => {
     await expect(
       page.getByRole('heading', { name: /web developer in malmö/i })
     ).toBeVisible();
-    await expect(page.getByText(/web-focused developer/i)).toBeVisible();
+    await expect(page.getByText(/Mpya Digital/i)).toBeVisible();
+    await expect(page.getByText(/TypeScript, React and Node/i)).toBeVisible();
   });
 
   test('how I work page lists working principles', async ({ page }) => {

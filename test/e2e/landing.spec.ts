@@ -17,9 +17,16 @@ test.describe('Landing Page', () => {
   test('currently section lists what August is up to', async ({ page }) => {
     await page.goto('/');
     await expect(page.getByText('Currently', { exact: true })).toBeVisible();
+    await expect(page.getByText(/Work/).first()).toBeVisible();
     await expect(page.getByText(/Building/).first()).toBeVisible();
     await expect(page.getByText(/Collecting/)).toBeVisible();
-    await expect(page.getByText(/Gym/)).toBeVisible();
+  });
+
+  test('currently section links to Mpya Digital', async ({ page }) => {
+    await page.goto('/');
+    const mpya = page.getByRole('link', { name: 'Mpya Digital' });
+    await expect(mpya).toBeVisible();
+    await expect(mpya).toHaveAttribute('href', 'https://www.mpyadigital.com');
   });
 
   test('currently section links to the chef repo', async ({ page }) => {

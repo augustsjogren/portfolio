@@ -2,8 +2,8 @@
  * All site copy lives here. Pages are dumb renderers; edit this file to
  * change what the site says, not how it is marked up.
  *
- * `heading` values are rendered in order; parts with `accent: true` are
- * wrapped in an <em> by the pages (accent styling lives in the markup).
+ * `heading` values render in order; parts with `accent: true` get the
+ * graphite accent <em> styling, parts with `href` render as links.
  */
 
 export type HeadingPart = { text: string; accent?: boolean };
@@ -36,6 +36,11 @@ export const links: Link[] = [
   { label: 'GitHub', href: site.github, external: true },
 ];
 
+export type ListItem = {
+  label: string;
+  text: (HeadingPart & { href?: string; external?: boolean })[];
+};
+
 export const home = {
   title: 'Home',
   hello: "Hej! I'm August.",
@@ -43,23 +48,34 @@ export const home = {
   lede: "I'm a developer passionate about technology, AI, and thoughtful design. I build web applications from the ground up, working end to end with an agentic approach.",
   currently: [
     {
-      label: 'Building',
-      text: 'a Rust TUI that keeps agent skills in one place and links them into your coding tools',
-      href: 'https://github.com/augustsjogren/chef',
-      hrefLabel: 'chef',
+      label: 'Work',
+      text: [
+        { text: 'Software Engineer (consultant) at ' },
+        { text: 'Mpya Digital', href: 'https://www.mpyadigital.com', external: true },
+      ],
     },
-    { label: 'Building', text: 'a music player app' },
-    { label: 'Collecting', text: 'vinyl and CDs of all sorts' },
-    { label: 'Gym', text: 'when I can' },
-  ],
+    {
+      label: 'Building',
+      text: [
+        { text: 'chef', href: 'https://github.com/augustsjogren/chef', external: true },
+        {
+          text: ', a Rust TUI that keeps agent skills in one place and links them into your coding tools',
+        },
+      ],
+    },
+    {
+      label: 'Collecting',
+      text: [{ text: 'vinyl and CDs of all sorts' }],
+    },
+  ] satisfies ListItem[],
 };
 
 export const about = {
   title: 'About',
   heading: [{ text: 'Web developer in Malmö.' }] satisfies HeadingPart[],
   paragraphs: [
-    "I'm a web-focused developer with an eye for design. I like carrying a feature the whole way: front end, back end, deploy. I don't commit to specific tools; I pick what fits the task.",
-    'I work fully agentic, daily-driving Claude Code, Cursor and Pi, and I keep tuning the setup to stay efficient. At home I run local models on my own hardware and tinker with different quants.',
+    "I work as a Software Engineer (consultant) at Mpya Digital. Day to day that's TypeScript, React and Node on Azure, and I'm open to whatever the task calls for.",
+    'I daily-drive Claude Code, Cursor and Pi and keep tuning the setup to stay efficient. At home I run local models on my own hardware and tinker with different quants.',
     'Off screen: music on vinyl and CD, and the gym when I can.',
   ],
 };
@@ -79,7 +95,7 @@ export const howIWork = {
     },
     {
       title: 'Agents type, I think.',
-      body: 'I work fully agentic: agents do the heavy lifting, I stay the architect. I review, understand and stand behind everything before it ships. The setup never stands still; I keep tuning it.',
+      body: 'I work fully agentic: agents do the heavy lifting, I stay the architect. I review, understand and stand behind everything before it ships.',
     },
     {
       title: 'Fundamentals compound.',
