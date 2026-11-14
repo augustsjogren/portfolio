@@ -30,7 +30,7 @@ test/
 
 ## Routes
 
-Defined in `src/main.tsx`: `/` (home), `/about`, `/how-i-work`, `/contact`, plus a 404 page.
+Defined in `src/main.tsx`: `/` (home), `/how-i-work`, `/contact`, plus a 404 page.
 
 ## Commands
 

@@ -19,13 +19,6 @@ test.describe('Pages Rendering', () => {
     await expect(page.locator('header, nav')).toBeVisible();
   });
 
-  test('about page should render with content', async ({ page }) => {
-    await page.goto('/about');
-
-    // Page should have heading
-    await expect(page.locator('h1, h2')).toBeVisible();
-  });
-
   test('how I work page should render with content', async ({ page }) => {
     await page.goto('/how-i-work');
 
@@ -38,16 +31,6 @@ test.describe('Pages Rendering', () => {
 
     // Contact page should have visible content
     await expect(page.locator('main, section, article')).toBeVisible();
-  });
-
-  test('about page shows heading and body copy', async ({ page }) => {
-    await page.goto('/about');
-
-    await expect(
-      page.getByRole('heading', { name: /web developer in malmö/i })
-    ).toBeVisible();
-    await expect(page.getByText(/Mpya Digital/i)).toBeVisible();
-    await expect(page.getByText(/TypeScript, React and Node/i)).toBeVisible();
   });
 
   test('how I work page lists working principles', async ({ page }) => {
@@ -102,7 +85,6 @@ test.describe('Pages Rendering', () => {
 
     // Visit all pages
     await page.goto('/');
-    await page.getByRole('link', { name: /about/i }).click();
     await page.getByRole('link', { name: /how i work/i }).click();
     await page.getByRole('link', { name: /contact/i }).click();
 

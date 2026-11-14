@@ -18,7 +18,6 @@ export const site = {
 
 export const nav = [
   { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
   { to: '/how-i-work', label: 'How I work' },
   { to: '/contact', label: 'Contact' },
 ];
@@ -46,6 +45,7 @@ export const home = {
   hello: "Hej! I'm August.",
   heading: [{ text: 'Builder of software.' }] satisfies HeadingPart[],
   lede: "I'm a developer passionate about technology, AI, and thoughtful design. I build web applications from the ground up, working end to end with an agentic approach.",
+  stack: 'TypeScript · React · Node',
   currently: [
     {
       label: 'Work',
@@ -65,19 +65,14 @@ export const home = {
       ],
     },
     {
+      label: 'Home lab',
+      text: [{ text: 'local models on my own hardware, quants and all' }],
+    },
+    {
       label: 'Off screen',
       text: [{ text: 'music on vinyl and CD, and the gym when I can' }],
     },
   ] satisfies ListItem[],
-};
-
-export const about = {
-  title: 'About',
-  heading: [{ text: 'Web developer in Malmö.' }] satisfies HeadingPart[],
-  paragraphs: [
-    "I work as a Software Engineer at Mpya Digital. Day to day that's TypeScript, React and Node on Azure, with Claude Code, Cursor and Pi alongside.",
-    'At home I run local models on my own hardware and tinker with different quants.',
-  ],
 };
 
 export const howIWork = {

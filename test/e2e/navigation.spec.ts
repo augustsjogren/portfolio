@@ -6,13 +6,6 @@ test.describe('Navigation', () => {
     await expect(page).toHaveTitle(/Portfolio|August|Home/i);
   });
 
-  test('should navigate to about page', async ({ page }) => {
-    await page.goto('/');
-    await page.getByRole('link', { name: /about/i }).click();
-    await expect(page).toHaveURL('/about');
-    await expect(page.locator('h1')).toBeVisible();
-  });
-
   test('should navigate to how I work page', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('link', { name: /how i work/i }).click();
@@ -26,12 +19,8 @@ test.describe('Navigation', () => {
   });
 
   test('should navigate between all pages from navbar', async ({ page }) => {
-    // Start from about
-    await page.goto('/about');
-    await expect(page).toHaveURL('/about');
-
-    // Navigate to how I work
-    await page.getByRole('link', { name: /how i work/i }).click();
+    // Start from how I work
+    await page.goto('/how-i-work');
     await expect(page).toHaveURL('/how-i-work');
 
     // Navigate to contact
@@ -45,8 +34,8 @@ test.describe('Navigation', () => {
 
   test('should support back button navigation', async ({ page }) => {
     await page.goto('/');
-    await page.getByRole('link', { name: /about/i }).click();
-    await expect(page).toHaveURL('/about');
+    await page.getByRole('link', { name: /how i work/i }).click();
+    await expect(page).toHaveURL('/how-i-work');
 
     await page.goBack();
     await expect(page).toHaveURL('/');

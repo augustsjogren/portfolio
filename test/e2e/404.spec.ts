@@ -18,7 +18,7 @@ test.describe('404 Page Handling', () => {
 
     // Should be able to navigate back to home
     const link = page
-      .getByRole('link', { name: /home|portfolio|about/i })
+      .getByRole('link', { name: /home|portfolio/i })
       .first();
     await expect(link).toBeDefined();
   });
