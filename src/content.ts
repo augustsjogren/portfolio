@@ -40,7 +40,7 @@ export const home = {
   title: 'Home',
   hello: "Hej! I'm August.",
   heading: [{ text: 'Builder of software.' }] satisfies HeadingPart[],
-  lede: "I'm a developer with a passion for tech and AI, and an eye for design. I build web apps end to end, and I work fully agentic.",
+  lede: "I'm a developer passionate about technology, AI, and thoughtful design. I build web applications from the ground up, working end to end with an agentic approach.",
   currently: [
     {
       label: 'Building',
