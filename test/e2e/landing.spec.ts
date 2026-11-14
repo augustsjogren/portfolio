@@ -65,4 +65,17 @@ test.describe('Landing Page', () => {
     await expect(footer.getByText(/© August Sjögren/)).toBeVisible();
     await expect(footer.getByText('Malmö, SE')).toBeVisible();
   });
+
+  test('header stays stuck to the top when scrolling', async ({ page }) => {
+    await page.goto('/');
+    await page.mouse.wheel(0, 800);
+
+    await expect
+      .poll(async () => {
+        const box = await page.locator('header').boundingBox();
+        return box ? Math.round(box.y) : -1;
+      })
+      .toBe(0);
+    await expect(page.locator('header')).toBeVisible();
+  });
 });
