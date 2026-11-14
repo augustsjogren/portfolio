@@ -45,7 +45,6 @@ export const home = {
   hello: "Hej! I'm August.",
   heading: [{ text: 'Builder of software.' }] satisfies HeadingPart[],
   lede: "I'm a developer passionate about technology, AI, and thoughtful design. I build web applications from the ground up, working end to end with an agentic approach.",
-  stack: 'TypeScript · React · Node',
   currently: [
     {
       label: 'Work',
@@ -53,6 +52,10 @@ export const home = {
         { text: 'Software Engineer at ' },
         { text: 'Mpya Digital', href: 'https://www.mpyadigital.com', external: true },
       ],
+    },
+    {
+      label: 'Prefers',
+      text: [{ text: 'TypeScript, React, Node' }],
     },
     {
       label: 'For fun',

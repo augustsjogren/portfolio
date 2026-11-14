@@ -16,7 +16,6 @@ const IndexPage = () => {
             <Heading parts={home.heading} />
           </h1>
           <p className={styles['landing-lede']}>{home.lede}</p>
-          <p className={styles['landing-stack']}>{home.stack}</p>
         </div>
         <div className={styles['landing-portrait-wrap']}>
           <img

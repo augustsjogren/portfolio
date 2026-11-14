@@ -7,7 +7,6 @@ test.describe('Landing Page', () => {
     await expect(
       page.getByRole('heading', { name: /builder of software/i })
     ).toBeVisible();
-    await expect(page.getByText(/TypeScript · React · Node/)).toBeVisible();
   });
 
   test('portrait has a location sticker', async ({ page }) => {
@@ -19,6 +18,7 @@ test.describe('Landing Page', () => {
     await page.goto('/');
     await expect(page.getByText('Currently', { exact: true })).toBeVisible();
     await expect(page.getByText(/Work/).first()).toBeVisible();
+    await expect(page.getByText(/Prefers/)).toBeVisible();
     await expect(page.getByText(/Building/).first()).toBeVisible();
     await expect(page.getByText(/Home lab/)).toBeVisible();
     await expect(page.getByText(/Off screen/)).toBeVisible();
