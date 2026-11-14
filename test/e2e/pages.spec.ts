@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { howIWork } from '../../src/content';
 
 test.describe('Pages Rendering', () => {
   test('home page should render without errors', async ({ page }) => {
@@ -47,14 +48,7 @@ test.describe('Pages Rendering', () => {
     await page.goto('/how-i-work');
 
     await expect(page.getByText(/the stack, right now/i)).toBeVisible();
-    for (const tool of [
-      'TypeScript',
-      'React',
-      'Node',
-      'Azure',
-      'Rust',
-      'Claude Code',
-    ]) {
+    for (const tool of howIWork.tools) {
       await expect(
         page.getByText(tool, { exact: true }).last()
       ).toBeVisible();
