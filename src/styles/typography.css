@@ -1,6 +1,12 @@
 html {
   font-family: var(--font-body);
   color: var(--ink);
+  /* 18px base — the design's rem values assume it.
+     em-based line-height: descendants inherit the computed 26.1px
+     absolutely (same as the legacy Gatsby reset this replaces),
+     so small text keeps the same line boxes. */
+  font-size: 112.5%;
+  line-height: 1.45em;
 }
 
 h1,
@@ -20,4 +26,21 @@ h1 {
 
 ul {
   list-style: none;
+}
+
+/* Base text rhythm — preserved from the legacy Gatsby typography reset
+   that used to ship in components/layout.css. Page CSS overrides these
+   with explicit margins; these keep unclassed content consistent. */
+p {
+  margin: 0 0 1.45rem;
+}
+
+li {
+  margin-bottom: 0.725rem;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
 }
