@@ -82,7 +82,9 @@
   font-family: var(--font-mono);
   font-size: 0.85rem;
   letter-spacing: 0.04em;
-  margin: 0 0 2rem;
+  /* pull up into the lede's collapsed margin so the address reads as
+     part of the same thought */
+  margin: -1.1rem 0 2rem;
 }
 
 .page-email a {
