@@ -65,8 +65,8 @@ export const home = {
       ],
     },
     {
-      label: 'Collecting',
-      text: [{ text: 'vinyl and CDs of all sorts' }],
+      label: 'Off screen',
+      text: [{ text: 'music on vinyl and CD, and the gym when I can' }],
     },
   ] satisfies ListItem[],
 };
@@ -76,7 +76,7 @@ export const about = {
   heading: [{ text: 'Web developer in Malmö.' }] satisfies HeadingPart[],
   paragraphs: [
     "I work as a Software Engineer at Mpya Digital. Day to day that's TypeScript, React and Node on Azure, with Claude Code, Cursor and Pi alongside.",
-    'At home I run local models on my own hardware and tinker with different quants. Off screen: music on vinyl and CD, and the gym when I can.',
+    'At home I run local models on my own hardware and tinker with different quants.',
   ],
 };
 

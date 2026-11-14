@@ -19,7 +19,7 @@ test.describe('Landing Page', () => {
     await expect(page.getByText('Currently', { exact: true })).toBeVisible();
     await expect(page.getByText(/Work/).first()).toBeVisible();
     await expect(page.getByText(/Building/).first()).toBeVisible();
-    await expect(page.getByText(/Collecting/)).toBeVisible();
+    await expect(page.getByText(/Off screen/)).toBeVisible();
   });
 
   test('currently section links to Mpya Digital', async ({ page }) => {
