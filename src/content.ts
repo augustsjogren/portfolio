@@ -107,8 +107,8 @@ export const howIWork = {
       body: 'I work fully agentic: agents do the heavy lifting, I stay the architect. I review, understand and stand behind everything before it ships.',
     },
     {
-      title: 'Communication compounds.',
-      body: "Explaining a trade-off, writing what people will actually read, hearing what a client means instead of what they say. It's the half of the job that makes the code land.",
+      title: 'Clear beats clever.',
+      body: "In code and in conversation. I explain trade-offs, write what people will actually read, and hear what a client means instead of what they say. The person who can explain the system owns it.",
     },
   ],
 };
