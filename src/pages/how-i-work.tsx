@@ -1,12 +1,17 @@
-import { howIWork } from '../content';
+import { howIWork, site } from '../content';
 import { Heading } from '../components/heading';
+import { PageMeta } from '../components/pageMeta';
 import { PageFooter } from '../components/pageFooter';
 import styles from './page.module.css';
 
 const HowIWorkPage = () => {
   return (
     <div className={styles.page}>
-      <title>{howIWork.title}</title>
+      <title>{howIWork.pageTitle}</title>
+      <PageMeta
+        description={howIWork.description}
+        canonical={`${site.url}/how-i-work`}
+      />
 
       <p className={styles['page-label']}>{howIWork.title}</p>
       <h1 className={styles['page-title']}>

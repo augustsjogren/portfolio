@@ -1,0 +1,2 @@
+# Canonicalize to the apex domain
+https://www.augustsjogren.com/* https://augustsjogren.com/:splat 301

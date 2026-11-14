@@ -1,13 +1,15 @@
-import { contact } from '../content';
+import { contact, site } from '../content';
 import { Heading } from '../components/heading';
 import { LinkChips } from '../components/linkChips';
+import { PageMeta } from '../components/pageMeta';
 import { PageFooter } from '../components/pageFooter';
 import styles from './page.module.css';
 
 const ContactPage = () => {
   return (
     <div className={styles.page}>
-      <title>{contact.title}</title>
+      <title>{contact.pageTitle}</title>
+      <PageMeta description={contact.description} canonical={`${site.url}/contact`} />
 
       <p className={styles['page-label']}>{contact.title}</p>
       <h1 className={styles['page-title']}>
