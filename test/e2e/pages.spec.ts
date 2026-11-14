@@ -48,10 +48,6 @@ test.describe('Pages Rendering', () => {
   }) => {
     await page.goto('/contact');
 
-    const mail = page.getByRole('link', { name: /email/i }).first();
-    await expect(mail).toBeVisible();
-    await expect(mail).toHaveAttribute('href', /^mailto:/);
-
     const address = page.getByRole('link', {
       name: /hello@augustsjogren\.com/i,
     });

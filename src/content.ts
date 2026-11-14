@@ -109,7 +109,7 @@ export const contact = {
   heading: [{ text: 'Get in touch.' }] satisfies HeadingPart[],
   lede: "Email is fastest. I'm also on LinkedIn and GitHub.",
   email: site.email,
-  links,
+  links: links.filter((link) => !link.mail),
 };
 
 export const notFound = {
