@@ -5,21 +5,31 @@ test.describe('Landing Page', () => {
     await page.goto('/');
     await expect(page.getByText(/Hej! I'm August/i)).toBeVisible();
     await expect(
-      page.getByRole('heading', { name: /runner, beatmaker/i })
+      page.getByRole('heading', { name: /builder of software/i })
     ).toBeVisible();
   });
 
   test('portrait has a location sticker', async ({ page }) => {
     await page.goto('/');
-    await expect(page.getByText('Malmö, SE')).toBeVisible();
+    await expect(page.getByText('Malmö, SE').first()).toBeVisible();
   });
 
   test('currently section lists what August is up to', async ({ page }) => {
     await page.goto('/');
     await expect(page.getByText('Currently', { exact: true })).toBeVisible();
-    await expect(page.getByText(/Making/)).toBeVisible();
-    await expect(page.getByText(/Running/)).toBeVisible();
-    await expect(page.getByText(/Building/)).toBeVisible();
+    await expect(page.getByText(/Building/).first()).toBeVisible();
+    await expect(page.getByText(/Collecting/)).toBeVisible();
+    await expect(page.getByText(/Gym/)).toBeVisible();
+  });
+
+  test('currently section links to the chef repo', async ({ page }) => {
+    await page.goto('/');
+    const chef = page.getByRole('link', { name: 'chef' });
+    await expect(chef).toBeVisible();
+    await expect(chef).toHaveAttribute(
+      'href',
+      'https://github.com/augustsjogren/chef'
+    );
   });
 
   test('find me section links to external profiles', async ({ page }) => {
@@ -35,13 +45,15 @@ test.describe('Landing Page', () => {
 
   test('email chip opens a mail draft', async ({ page }) => {
     await page.goto('/');
-    const mail = page.getByRole('link', { name: /say hi/i });
+    const mail = page.getByRole('link', { name: /email/i });
     await expect(mail).toBeVisible();
     await expect(mail).toHaveAttribute('href', /^mailto:/);
   });
 
   test('footer is present', async ({ page }) => {
     await page.goto('/');
-    await expect(page.getByText(/built with too much coffee/i)).toBeVisible();
+    const footer = page.locator('footer');
+    await expect(footer.getByText(/© August Sjögren/)).toBeVisible();
+    await expect(footer.getByText('Malmö, SE')).toBeVisible();
   });
 });

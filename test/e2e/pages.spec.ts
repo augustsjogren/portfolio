@@ -44,7 +44,7 @@ test.describe('Pages Rendering', () => {
     await page.goto('/about');
 
     await expect(
-      page.getByRole('heading', { name: /code by day/i })
+      page.getByRole('heading', { name: /web developer in malmö/i })
     ).toBeVisible();
     await expect(page.getByText(/web-focused developer/i)).toBeVisible();
   });
@@ -55,7 +55,7 @@ test.describe('Pages Rendering', () => {
     await expect(
       page.getByRole('heading', { name: /the stack changes/i })
     ).toBeVisible();
-    await expect(page.getByRole('listitem')).toHaveCount(4);
+    await expect(page.getByRole('listitem')).toHaveCount(3);
     await expect(page.getByText(/agents type/i)).toBeVisible();
   });
 
@@ -64,7 +64,7 @@ test.describe('Pages Rendering', () => {
   }) => {
     await page.goto('/contact');
 
-    const mail = page.getByRole('link', { name: /say hi/i });
+    const mail = page.getByRole('link', { name: /email/i });
     await expect(mail).toBeVisible();
     await expect(mail).toHaveAttribute('href', /^mailto:/);
 
