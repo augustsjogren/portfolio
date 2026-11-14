@@ -1,10 +1,12 @@
 import { notFound } from '../content';
 import { Heading } from '../components/heading';
+import { PageMeta } from '../components/pageMeta';
 import styles from './page.module.css';
 
 const NotFoundPage = () => (
   <div className={styles.page}>
-    <title>{notFound.label}</title>
+    <title>{notFound.pageTitle}</title>
+    <PageMeta description={notFound.description} />
 
     <p className={styles['page-label']}>{notFound.label}</p>
     <h1 className={styles['page-title']}>

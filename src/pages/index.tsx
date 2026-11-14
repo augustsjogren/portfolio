@@ -2,12 +2,14 @@ import profileImage from '../images/Aggebagge_web.webp';
 import { home, links, site } from '../content';
 import { Heading } from '../components/heading';
 import { LinkChips } from '../components/linkChips';
+import { PageMeta } from '../components/pageMeta';
 import styles from './landing.module.css';
 
 const IndexPage = () => {
   return (
     <div className={styles.landing}>
-      <title>{home.title}</title>
+      <title>{home.pageTitle}</title>
+      <PageMeta description={home.description} canonical={`${site.url}/`} />
 
       <section className={styles['landing-hero']}>
         <div className={styles['landing-hero-text']}>

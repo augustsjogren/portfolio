@@ -3,10 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>August Sjögren – Software Developer</title>
     <meta
       name="description"
       content="Presentation website for August Sjögren, a software developer based in Sweden."
     />
+    <link rel="canonical" href="https://augustsjogren.com/" />
+
+    <!-- Open Graph / link previews -->
+    <meta property="og:site_name" content="August Sjögren" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://augustsjogren.com/" />
+    <meta property="og:title" content="August Sjögren – Software Developer" />
+    <meta
+      property="og:description"
+      content="Presentation website for August Sjögren, a software developer based in Sweden."
+    />
+    <meta property="og:image" content="https://augustsjogren.com/favicon.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="August Sjögren – Software Developer" />
+    <meta
+      name="twitter:description"
+      content="Presentation website for August Sjögren, a software developer based in Sweden."
+    />
+    <meta name="twitter:image" content="https://augustsjogren.com/favicon.png" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "August Sjögren",
+        "url": "https://augustsjogren.com/",
+        "email": "mailto:hello@augustsjogren.com",
+        "jobTitle": "Software Engineer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Malmö",
+          "addressCountry": "SE"
+        },
+        "sameAs": [
+          "https://github.com/augustsjogren",
+          "https://www.linkedin.com/in/august-sjogren"
+        ]
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +56,8 @@
       rel="stylesheet"
     />
     <script type="module" src="./src/main.tsx"></script>
-    <link rel="icon" type="image/png" href="/src/images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/src/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/src/images/favicon.png" />
   </head>
   <body>
     <div id="root"></div>

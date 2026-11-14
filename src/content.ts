@@ -10,6 +10,7 @@ export type HeadingPart = { text: string; accent?: boolean };
 
 export const site = {
   name: 'August Sjögren',
+  url: 'https://augustsjogren.com',
   location: 'Malmö, SE',
   email: 'hello@augustsjogren.com',
   github: 'https://github.com/augustsjogren',
@@ -42,6 +43,9 @@ export type ListItem = {
 
 export const home = {
   title: 'Home',
+  pageTitle: 'August Sjögren – Software Developer',
+  description:
+    "Hej! I'm August Sjögren, a software developer in Malmö, Sweden. I build web applications end to end with TypeScript, React and Node — working agentic, from idea to deploy.",
   hello: "Hej! I'm August.",
   heading: [{ text: 'Builder of software.' }] satisfies HeadingPart[],
   lede: "I'm a developer passionate about technology, AI, and thoughtful design. I build web applications from the ground up, working end to end with an agentic approach.",
@@ -82,6 +86,9 @@ export const home = {
 
 export const howIWork = {
   title: 'How I work',
+  pageTitle: 'How I work – August Sjögren',
+  description:
+    "How August Sjögren works: no fixed tool list, but constant principles — own the whole problem, agents type while he architects, and clarity beats cleverness.",
   heading: [
     { text: 'The stack changes. ' },
     { text: 'The principles', accent: true },
@@ -115,6 +122,9 @@ export const howIWork = {
 
 export const contact = {
   title: 'Contact',
+  pageTitle: 'Contact – August Sjögren',
+  description:
+    "Get in touch with August Sjögren. Email is fastest — he's also on LinkedIn and GitHub.",
   heading: [{ text: 'Get in touch.' }] satisfies HeadingPart[],
   lede: "Email is fastest. I'm also on LinkedIn and GitHub.",
   email: site.email,
@@ -123,6 +133,9 @@ export const contact = {
 
 export const notFound = {
   label: '404',
+  pageTitle: 'Page not found – August Sjögren',
+  description:
+    "That page doesn't exist on augustsjogren.com. Head back home and try again.",
   heading: [{ text: 'Lost the trail.' }] satisfies HeadingPart[],
   message: "That route doesn't exist. Head back ",
   linkLabel: 'home',
