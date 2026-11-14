@@ -7,7 +7,7 @@ export const HeaderLink = ({ children, to }: PropsWithChildren<{ to: To }>) => {
     <NavLink
       to={to}
       className={({ isActive }) =>
-        [isActive ? styles.active : '', styles['header-link']].join(' ')
+        [isActive ? styles.active : "", styles["header-link"]].join(" ")
       }
     >
       {children}

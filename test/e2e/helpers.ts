@@ -27,8 +27,7 @@ export function setupConsoleErrorCapture(page: Page): {
 export async function visitAllPages(page: Page): Promise<void> {
   const pages = [
     { url: '/', name: 'home' },
-    { url: '/about', name: 'about' },
-    { url: '/skills', name: 'skills' },
+    { url: '/how-i-work', name: 'how I work' },
     { url: '/contact', name: 'contact' },
   ];
 

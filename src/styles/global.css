@@ -2,23 +2,39 @@
 @import './typography.css';
 @import './layout.css';
 
+/*--- Design tokens (graphite theme) ---*/
+
+:root {
+  --bg: #17181a;
+  --panel: #1f2124;
+  --ink: #f2f2f0;
+  --muted: #9a9b99;
+  --accent: #e4c87f;
+  --hairline: #2c2e31;
+
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
 /*--- Base ---*/
 
 html,
-body,
-.row ul {
+body {
   margin: 0;
 }
 
-li {
-  padding-top: 5px;
-  padding-bottom: 5px;
+body {
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *:focus-visible {
-  outline-color: black;
-  outline-offset: 6px;
+  outline-color: var(--accent);
+  outline-offset: 4px;
   outline-style: solid;
   outline-width: 2px;
-  border-radius: 8px;
+  border-radius: 4px;
 }

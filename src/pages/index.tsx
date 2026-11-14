@@ -1,28 +1,86 @@
-
-import styles from './index.module.css';
 import profileImage from '../images/Aggebagge_web.webp';
-import MainContainer from '../components/layout/mainContainer';
+import { home, links, site } from '../content';
+import { Heading } from '../components/heading';
+import { LinkChips } from '../components/linkChips';
+import styles from './landing.module.css';
 
 const IndexPage = () => {
   return (
-    <MainContainer>
-      <title>Home</title>
-      <div className='row-md'>
-        <div className='col justify-center'>
-          <div className='flex--col justify-center'>
-            <h1>Hi!</h1>
-            <p>
-              I&apos;m August, a software developer based in Malmö, Sweden. I
-              enjoy writing code, especially for applications that give the user
-              a great experience. Simple as that.
-            </p>
-          </div>
+    <div className={styles.landing}>
+      <title>{home.title}</title>
+
+      <section className={styles['landing-hero']}>
+        <div className={styles['landing-hero-text']}>
+          <p className={styles['landing-hello']}>{home.hello}</p>
+          <h1 className={styles['landing-title']}>
+            <Heading parts={home.heading} />
+          </h1>
+          <p className={styles['landing-lede']}>{home.lede}</p>
         </div>
-        <div className='col'>
-          <img alt='' src={profileImage} className={styles['bio-img']} />
+        <div className={styles['landing-portrait-wrap']}>
+          <img
+            className={styles['landing-portrait']}
+            src={profileImage}
+            alt="August Sjögren"
+          />
+          <span className={styles['landing-sticker']}>
+            <svg
+              aria-hidden="true"
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            {site.location}
+          </span>
         </div>
-      </div>
-    </MainContainer>
+      </section>
+
+      <section className={styles['landing-section']}>
+        <p className={styles['landing-section-label']}>Currently</p>
+        <ul className={styles['landing-now-list']}>
+          {home.currently.map((item) => (
+            <li key={item.label + item.text[0].text}>
+              <span className={styles.dot} />
+              <span>
+                <b>{item.label}:</b>{' '}
+                {item.text.map((part) =>
+                  part.href ? (
+                    <a
+                      key={part.text}
+                      href={part.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {part.text}
+                    </a>
+                  ) : (
+                    <span key={part.text}>{part.text}</span>
+                  ),
+                )}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className={styles['landing-section']}>
+        <p className={styles['landing-section-label']}>Find me</p>
+        <LinkChips links={links} />
+      </section>
+
+      <footer className={styles['landing-footer']}>
+        <span>© {site.name}</span>
+        <span>{site.location}</span>
+      </footer>
+    </div>
   );
 };
 

@@ -1,0 +1,139 @@
+/* Shared page layout for About / Contact / How I work / 404 */
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+  width: 100%;
+}
+
+.page-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.1rem;
+}
+
+.page-title {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  margin: 0 0 1.4rem;
+}
+
+.page-lede {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 52ch;
+  margin: 0 0 2.5rem;
+}
+
+.page-lede strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.page-body {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.page-body p + p {
+  margin-top: 1.1rem;
+}
+
+.page-body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.principles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 640px;
+}
+
+.principles .principle {
+  border-top: 1px solid var(--hairline);
+  padding: 1.6rem 0;
+}
+
+.principles h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+
+.principles .principle p {
+  font-size: 1.02rem;
+  color: var(--muted);
+  margin: 0;
+  max-width: 52ch;
+}
+
+.page-email {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  /* pull up into the lede's collapsed margin so the address reads as
+     part of the same thought */
+  margin: -1.1rem 0 2rem;
+}
+
+.page-email a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.page-email a:hover {
+  color: var(--ink);
+}
+
+.tools-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 3rem 0 1.2rem;
+}
+
+.tools-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tools-tag {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  background: var(--panel);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.97rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.page-footer {
+  margin-top: 3rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
