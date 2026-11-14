@@ -86,12 +86,12 @@
 }
 
 .page-email a {
-  color: var(--ink);
+  color: var(--accent);
   text-decoration: none;
 }
 
 .page-email a:hover {
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .page-footer {
