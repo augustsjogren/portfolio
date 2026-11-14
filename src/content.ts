@@ -69,7 +69,9 @@ export const home = {
     },
     {
       label: 'Home lab',
-      text: [{ text: 'local models on my own hardware, quants and all' }],
+      text: [
+        { text: 'self-hosting my own services and running local models, quants and all' },
+      ],
     },
     {
       label: 'Off screen',
