@@ -3,7 +3,7 @@
   "private": true,
   "description": "",
   "version": "0.1.0",
-  "author": "August Sj\u00f6gren <hello@augustsjogren.com>",
+  "author": "August Sj\u00f6gren <hello@imaugust.com>",
   "type": "module",
   "dependencies": {
     "react": "^19.2.4",
