@@ -61,7 +61,7 @@ test.describe('Pages Rendering', () => {
     await page.goto('/contact');
 
     const address = page.getByRole('link', {
-      name: /hello@augustsjogren\.com/i,
+      name: /hello@imaugust\.com/i,
     });
     await expect(address).toBeVisible();
     await expect(address).toHaveAttribute('href', /^mailto:/);

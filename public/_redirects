@@ -1,2 +1,6 @@
 # Canonicalize to the apex domain
-https://www.augustsjogren.com/* https://augustsjogren.com/:splat 301
+https://www.imaugust.com/* https://imaugust.com/:splat 301
+
+# Redirect the old domain to the new one
+https://www.augustsjogren.com/* https://imaugust.com/:splat 301
+https://augustsjogren.com/* https://imaugust.com/:splat 301

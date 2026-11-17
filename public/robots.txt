@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://augustsjogren.com/sitemap.xml
+Sitemap: https://imaugust.com/sitemap.xml

@@ -10,9 +10,9 @@ export type HeadingPart = { text: string; accent?: boolean };
 
 export const site = {
   name: 'August Sjögren',
-  url: 'https://augustsjogren.com',
+  url: 'https://imaugust.com',
   location: 'Malmö, SE',
-  email: 'hello@augustsjogren.com',
+  email: 'hello@imaugust.com',
   github: 'https://github.com/augustsjogren',
   linkedin: 'https://www.linkedin.com/in/august-sjogren',
 };
@@ -135,7 +135,7 @@ export const notFound = {
   label: '404',
   pageTitle: 'Page not found – August Sjögren',
   description:
-    "That page doesn't exist on augustsjogren.com. Head back home and try again.",
+    "That page doesn't exist on imaugust.com. Head back home and try again.",
   heading: [{ text: 'Lost the trail.' }] satisfies HeadingPart[],
   message: "That route doesn't exist. Head back ",
   linkLabel: 'home',

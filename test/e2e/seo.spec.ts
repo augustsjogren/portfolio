@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { contact, home, howIWork } from '../../src/content';
 
-const BASE = 'https://augustsjogren.com';
+const BASE = 'https://imaugust.com';
 
 test.describe('Static HTML head (what crawlers see before JS runs)', () => {
   test('served index.html has a title, description, canonical and Open Graph tags', async ({
@@ -47,7 +47,7 @@ test.describe('Static HTML head (what crawlers see before JS runs)', () => {
 
     expect(body).toContain('User-agent: *');
     expect(body).toContain('Allow: /');
-    expect(body).toContain('Sitemap: https://augustsjogren.com/sitemap.xml');
+    expect(body).toContain('Sitemap: https://imaugust.com/sitemap.xml');
   });
 
   test('sitemap.xml is served and lists all routes', async ({ request }) => {
