@@ -1,4 +1,5 @@
 import { site } from '../../content';
+import { seloriaEmail } from './content';
 import { ProsePage } from '../../components/prosePage';
 
 const SupportPage = () => (
@@ -10,8 +11,9 @@ const SupportPage = () => (
   >
     <h2>Contact</h2>
     <p>
-      Email <a href={`mailto:${site.email}`}>{site.email}</a>. Include your iOS
-      version, Seloria version, and server type and version (Navidrome etc.).
+      Email <a href={`mailto:${seloriaEmail}`}>{seloriaEmail}</a>. Include your
+      iOS version, Seloria version, and server type and version (Navidrome
+      etc.).
     </p>
 
     <h2>Before you start</h2>

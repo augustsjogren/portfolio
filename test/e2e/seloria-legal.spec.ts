@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { site } from '../../src/content';
+import { seloriaEmail } from '../../src/pages/seloria/content';
 
 const pages = [
   { path: '/seloria/privacy', h1: /privacy policy/i },
@@ -30,8 +30,8 @@ for (const { path, h1 } of pages) {
     test('shows the contact email', async ({ page }) => {
       await page.goto(path);
       await expect(
-        page.getByRole('link', { name: site.email }).first()
-      ).toHaveAttribute('href', `mailto:${site.email}`);
+        page.getByRole('link', { name: seloriaEmail }).first()
+      ).toHaveAttribute('href', `mailto:${seloriaEmail}`);
     });
 
     test('is listed in the sitemap', async ({ request }) => {

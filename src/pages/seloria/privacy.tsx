@@ -1,4 +1,5 @@
 import { site } from '../../content';
+import { seloriaEmail } from './content';
 import { ProsePage } from '../../components/prosePage';
 
 const PrivacyPage = () => (
@@ -59,7 +60,7 @@ const PrivacyPage = () => (
 
     <h2>Contact</h2>
     <p>
-      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <a href={`mailto:${seloriaEmail}`}>{seloriaEmail}</a>
     </p>
   </ProsePage>
 );
