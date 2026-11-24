@@ -58,15 +58,6 @@ test.describe('Seloria showcase page', () => {
     expect(body).toContain('<loc>https://imaugust.com/seloria</loc>');
   });
 
-  test('is reachable from the home page', async ({ page }) => {
-    await page.goto('/');
-    await page.getByRole('link', { name: 'Seloria' }).click();
-    await expect(page).toHaveURL(/\/seloria$/);
-    await expect(
-      page.getByRole('heading', { level: 1, name: 'Seloria' })
-    ).toBeVisible();
-  });
-
   test('deep link /seloria/* falls back to the app, not a server 404', async ({
     request,
   }) => {

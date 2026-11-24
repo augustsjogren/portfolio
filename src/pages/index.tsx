@@ -1,10 +1,8 @@
-import { Link } from 'react-router-dom';
 import profileImage from '../images/Aggebagge_web.webp';
 import { home, links, site } from '../content';
 import { Heading } from '../components/heading';
 import { LinkChips } from '../components/linkChips';
 import { PageMeta } from '../components/pageMeta';
-import { seloria } from '../seloriaContent';
 import styles from './landing.module.css';
 
 const IndexPage = () => {
@@ -72,20 +70,6 @@ const IndexPage = () => {
               </span>
             </li>
           ))}
-        </ul>
-      </section>
-
-      <section className={styles['landing-section']}>
-        <p className={styles['landing-section-label']}>{seloria.home.label}</p>
-        <ul className={styles['landing-now-list']}>
-          <li>
-            <span className={styles.dot} />
-            <span>
-              <Link to={seloria.path}>{seloria.home.linkLabel}</Link>
-              {': '}
-              {seloria.pitch}
-            </span>
-          </li>
         </ul>
       </section>
 

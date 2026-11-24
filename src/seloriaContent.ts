@@ -64,9 +64,4 @@ export const seloria = {
     { label: 'Privacy', to: '/seloria/privacy' },
     { label: 'Support', to: '/seloria/support' },
   ],
-  home: {
-    label: 'Project',
-    text: 'Seloria, an iOS music player for your own Navidrome or Subsonic server',
-    linkLabel: 'Seloria',
-  },
 };
