@@ -183,7 +183,7 @@
   margin: 0;
 }
 
-.project-card p {
+.project-desc {
   font-size: 1.02rem;
   color: var(--muted);
   margin: 0;

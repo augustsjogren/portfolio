@@ -26,7 +26,7 @@ const ProjectsPage = () => {
             <>
               <span className={styles['project-kind']}>{project.kind}</span>
               <h2>{project.name}</h2>
-              <p>{project.description}</p>
+              <p className={styles['project-desc']}>{project.description}</p>
               <span className={styles['project-cta']}>{project.cta} →</span>
             </>
           );
