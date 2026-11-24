@@ -9,6 +9,7 @@ const NotFoundPage = React.lazy(() => import('./pages/404'));
 const IndexPage = React.lazy(() => import('./pages/'));
 const ContactPage = React.lazy(() => import('./pages/contact'));
 const HowIWorkPage = React.lazy(() => import('./pages/how-i-work'));
+const SeloriaPage = React.lazy(() => import('./pages/seloria'));
 const SeloriaPrivacyPage = React.lazy(() => import('./pages/seloria/privacy'));
 const SeloriaSupportPage = React.lazy(() => import('./pages/seloria/support'));
 
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { element: <IndexPage />, index: true },
       { path: 'how-i-work', element: <HowIWorkPage /> },
       { path: 'contact', element: <ContactPage /> },
+      { path: 'seloria', element: <SeloriaPage /> },
       { path: 'seloria/privacy', element: <SeloriaPrivacyPage /> },
       { path: 'seloria/support', element: <SeloriaSupportPage /> },
       { path: '*', element: <NotFoundPage /> },
