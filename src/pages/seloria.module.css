@@ -103,6 +103,8 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-padding: 0 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--hairline) transparent;
 }
 
 .shot-item {

@@ -12,6 +12,8 @@
   --accent: #e4c87f;
   --hairline: #2c2e31;
 
+  color-scheme: dark;
+
   --font-body: 'Hanken Grotesk', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
