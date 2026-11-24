@@ -86,4 +86,20 @@ test.describe('Seloria showcase page', () => {
     );
     expect(overflow).toBe(false);
   });
+
+  test('shows app screenshots that load', async ({ page }) => {
+    await page.goto('/seloria');
+    const shots = page.getByRole('img', { name: /^Seloria /i });
+    await expect(shots.first()).toBeVisible();
+    expect(await shots.count()).toBeGreaterThanOrEqual(6);
+    const broken = await shots.evaluateAll(
+      (imgs) =>
+        imgs.filter(
+          (img) =>
+            (img as HTMLImageElement).complete &&
+            (img as HTMLImageElement).naturalWidth === 0
+        ).length
+    );
+    expect(broken).toBe(0);
+  });
 });

@@ -1,39 +1,53 @@
 import { Link } from 'react-router-dom';
 import { PageMeta } from '../components/pageMeta';
 import { PageFooter } from '../components/pageFooter';
-import {
-  seloria,
-  seloriaDownload,
-  seloriaScreenshots,
-} from '../seloriaContent';
+import { seloria, seloriaDownload } from '../seloriaContent';
+import { seloriaScreenshots } from '../seloriaScreenshots';
 import page from './page.module.css';
 import styles from './seloria.module.css';
+
+const heroShot = seloriaScreenshots.find((s) => s.caption === 'Player');
 
 const SeloriaPage = () => (
   <div className={page.page}>
     <title>{seloria.pageTitle}</title>
     <PageMeta description={seloria.description} canonical={seloria.canonical} />
 
-    <p className={page['page-label']}>{seloria.label}</p>
-    <h1 className={page['page-title']}>{seloria.name}</h1>
-    <p className={page['page-lede']}>
-      <strong>{seloria.tagline}</strong> {seloria.pitch}
-    </p>
+    <section className={styles.hero}>
+      <div className={styles['hero-text']}>
+        <p className={page['page-label']}>{seloria.label}</p>
+        <h1 className={page['page-title']}>{seloria.name}</h1>
+        <p className={page['page-lede']}>
+          <strong>{seloria.tagline}</strong> {seloria.pitch}
+        </p>
 
-    {seloriaDownload.url ? (
-      <a
-        className={styles.download}
-        href={seloriaDownload.url}
-        target='_blank'
-        rel='noreferrer'
-      >
-        {seloriaDownload.label}
-      </a>
-    ) : (
-      <p className={styles.badge} data-testid='seloria-coming-soon'>
-        {seloriaDownload.note}
-      </p>
-    )}
+        {seloriaDownload.url ? (
+          <a
+            className={styles.download}
+            href={seloriaDownload.url}
+            target='_blank'
+            rel='noreferrer'
+          >
+            {seloriaDownload.label}
+          </a>
+        ) : (
+          <p className={styles.badge} data-testid='seloria-coming-soon'>
+            {seloriaDownload.note}
+          </p>
+        )}
+      </div>
+      {heroShot && (
+        <div className={styles['hero-shot']}>
+          <img
+            className={styles['hero-img']}
+            src={heroShot.src}
+            alt={heroShot.alt}
+            width={600}
+            height={1304}
+          />
+        </div>
+      )}
+    </section>
 
     <section aria-labelledby='seloria-features'>
       <h2 id='seloria-features' className={page['tools-label']}>
@@ -54,16 +68,21 @@ const SeloriaPage = () => (
         {seloria.screenshotsLabel}
       </h2>
       {seloriaScreenshots.length > 0 ? (
-        <div className={styles.shots}>
+        <ul className={styles.shots}>
           {seloriaScreenshots.map((shot) => (
-            <img
-              key={shot.src}
-              className={styles.shot}
-              src={shot.src}
-              alt={shot.alt}
-            />
+            <li key={shot.src} className={styles['shot-item']}>
+              <img
+                className={styles.shot}
+                src={shot.src}
+                alt={shot.alt}
+                width={600}
+                height={1304}
+                loading='lazy'
+              />
+              <span className={styles['shot-caption']}>{shot.caption}</span>
+            </li>
           ))}
-        </div>
+        </ul>
       ) : (
         <p className={styles.placeholder}>{seloria.screenshotsPlaceholder}</p>
       )}

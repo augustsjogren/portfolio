@@ -19,12 +19,6 @@ export const seloriaDownload: {
   note: 'Coming soon. App Store and TestFlight links will appear here.',
 };
 
-/**
- * Screenshots. Empty until real ones exist; the page shows a placeholder.
- * Add { src, alt } entries to render them.
- */
-export const seloriaScreenshots: { src: string; alt: string }[] = [];
-
 export const seloria = {
   name: 'Seloria',
   path: '/seloria',
