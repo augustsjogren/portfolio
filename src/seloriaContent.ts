@@ -16,7 +16,7 @@ export const seloriaDownload: {
 } = {
   url: null,
   label: 'Download on the App Store',
-  note: 'Coming soon. App Store and TestFlight links will appear here.',
+  note: 'Coming soon to the App Store.',
 };
 
 export const seloria = {
