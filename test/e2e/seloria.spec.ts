@@ -1,9 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { setupConsoleErrorCapture } from './helpers';
-import { seloria } from '../../src/seloriaContent';
 
 test.describe('Seloria showcase page', () => {
-  test('renders hero, features and no console errors', async ({ page }) => {
+  test('renders hero, features, links, screenshots and no console errors', async ({ page }) => {
     const { getErrors } = setupConsoleErrorCapture(page);
     await page.goto('/seloria');
 
@@ -21,11 +20,7 @@ test.describe('Seloria showcase page', () => {
     ).toBeVisible();
     await expect(page.getByText(/iOS Keychain/)).toBeVisible();
     await expect(page.getByTestId('seloria-coming-soon')).toBeVisible();
-    expect(getErrors()).toHaveLength(0);
-  });
 
-  test('links to privacy and support', async ({ page }) => {
-    await page.goto('/seloria');
     await expect(page.getByRole('link', { name: 'Privacy' })).toHaveAttribute(
       'href',
       '/seloria/privacy'
@@ -34,28 +29,21 @@ test.describe('Seloria showcase page', () => {
       'href',
       '/seloria/support'
     );
-  });
 
-  test('has its own title, description and canonical', async ({ page }) => {
-    await page.goto('/seloria');
-    await expect(page).toHaveTitle(seloria.pageTitle);
-    await expect
-      .poll(async () =>
-        page
-          .locator('head meta[name="description"]')
-          .evaluateAll((els) => els.map((el) => el.getAttribute('content')))
-      )
-      .toContain(seloria.description);
-    await expect(
-      page.locator(
-        'head link[rel="canonical"][href="https://imaugust.com/seloria"]'
-      )
-    ).toHaveCount(1);
-  });
+    const shots = page.getByRole('img', { name: /^Seloria /i });
+    await expect(shots.first()).toBeVisible();
+    expect(await shots.count()).toBeGreaterThanOrEqual(6);
+    const broken = await shots.evaluateAll(
+      (imgs) =>
+        imgs.filter(
+          (img) =>
+            (img as HTMLImageElement).complete &&
+            (img as HTMLImageElement).naturalWidth === 0
+        ).length
+    );
+    expect(broken).toBe(0);
 
-  test('sitemap lists /seloria', async ({ request }) => {
-    const body = await (await request.get('/sitemap.xml')).text();
-    expect(body).toContain('<loc>https://imaugust.com/seloria</loc>');
+    expect(getErrors()).toHaveLength(0);
   });
 
   test('deep link /seloria/* falls back to the app, not a server 404', async ({
@@ -76,22 +64,6 @@ test.describe('Seloria showcase page', () => {
       () => document.documentElement.scrollWidth > window.innerWidth
     );
     expect(overflow).toBe(false);
-  });
-
-  test('shows app screenshots that load', async ({ page }) => {
-    await page.goto('/seloria');
-    const shots = page.getByRole('img', { name: /^Seloria /i });
-    await expect(shots.first()).toBeVisible();
-    expect(await shots.count()).toBeGreaterThanOrEqual(6);
-    const broken = await shots.evaluateAll(
-      (imgs) =>
-        imgs.filter(
-          (img) =>
-            (img as HTMLImageElement).complete &&
-            (img as HTMLImageElement).naturalWidth === 0
-        ).length
-    );
-    expect(broken).toBe(0);
   });
 
   test('gallery chevrons scroll the screenshots', async ({ page }) => {

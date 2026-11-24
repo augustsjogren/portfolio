@@ -31,6 +31,7 @@
     "lint:fix": "biome lint --write ./src",
     "test": "echo \"No unit tests configured yet\"",
     "test:e2e": "playwright test",
+    "test:e2e:all": "ALL_BROWSERS=1 playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:debug": "playwright test --debug"
   },

@@ -8,7 +8,6 @@ Tests are located in the `test/e2e/` directory and organized by feature:
 
 - `navigation.spec.ts` - Page navigation and routing
 - `pages.spec.ts` - Page rendering and content
-- `404.spec.ts` - Error handling
 - `helpers.ts` - Shared test utilities
 
 ## Running Tests
@@ -42,7 +41,7 @@ When adding a new feature, you **must** add corresponding e2e tests:
    - New elements? Test they render and are visible
    - New forms? Test user interactions
 
-3. **Error Handling** → Add tests to `test/e2e/404.spec.ts` or create new file
+3. **Error Handling** → Add tests to `test/e2e/pages.spec.ts` or create new file
    - New error states? Test they display correctly
 
 ### Example: Adding a Test
