@@ -24,7 +24,6 @@ test/
     ├── navigation.spec.ts   # Route/navigation tests
     ├── pages.spec.ts        # Feature/rendering tests
     ├── landing.spec.ts      # Landing page tests
-    ├── 404.spec.ts          # Error handling tests
     └── helpers.ts           # Shared test utilities
 ```
 
@@ -47,7 +46,7 @@ npm run test:e2e:ui  # Interactive Playwright UI for debugging
 Notes:
 
 - `npm run test:e2e` starts the dev server itself — you do not need `npm run dev` running first (locally; in CI it's always started fresh).
-- Tests run against chromium, firefox, webkit and Mobile Chrome.
+- Tests run against chromium by default. `npm run test:e2e:all` (runs on main in CI) adds firefox, webkit and Mobile Chrome.
 
 ## The Golden Rule
 

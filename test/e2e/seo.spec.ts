@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { contact, home, howIWork, projects } from '../../src/content';
+import { seloria } from '../../src/seloriaContent';
 
 const BASE = 'https://imaugust.com';
 
@@ -55,7 +56,15 @@ test.describe('Static HTML head (what crawlers see before JS runs)', () => {
     expect(res.status()).toBe(200);
     const body = await res.text();
 
-    for (const path of ['/', '/how-i-work', '/projects', '/contact']) {
+    for (const path of [
+      '/',
+      '/how-i-work',
+      '/projects',
+      '/contact',
+      '/seloria',
+      '/seloria/privacy',
+      '/seloria/support',
+    ]) {
       expect(body).toContain(`<loc>${BASE}${path}</loc>`);
     }
   });
@@ -80,6 +89,12 @@ test.describe('Rendered head (after JS runs)', () => {
       pageTitle: projects.pageTitle,
       description: projects.description,
       canonical: `${BASE}/projects`,
+    },
+    {
+      path: '/seloria',
+      pageTitle: seloria.pageTitle,
+      description: seloria.description,
+      canonical: `${BASE}/seloria`,
     },
     {
       path: '/contact',

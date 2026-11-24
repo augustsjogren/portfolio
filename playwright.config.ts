@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
+const browserAgnostic = ['**/seo.spec.ts', '**/404.spec.ts'];
+
 export default defineConfig({
   testDir: './test/e2e',
   fullyParallel: true,
@@ -35,19 +37,26 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
+    // Cross-browser projects only run with ALL_BROWSERS=1 (nightly / manual).
+    // Browser-agnostic specs (SEO, 404) already run on chromium.
+    ...(process.env.ALL_BROWSERS
+      ? [
+          {
+            name: 'firefox',
+            use: { ...devices['Desktop Firefox'] },
+            testIgnore: browserAgnostic,
+          },
+          {
+            name: 'webkit',
+            use: { ...devices['Desktop Safari'] },
+            testIgnore: browserAgnostic,
+          },
+          {
+            name: 'Mobile Chrome',
+            use: { ...devices['Pixel 5'] },
+            testIgnore: browserAgnostic,
+          },
+        ]
+      : []),
   ],
 });

@@ -8,7 +8,7 @@ const pages = [
 
 for (const { path, h1 } of pages) {
   test.describe(path, () => {
-    test('renders with a single h1, back link and canonical', async ({
+    test('renders with a single h1, back link, canonical and contact email', async ({
       page,
     }) => {
       await page.goto(path);
@@ -25,18 +25,9 @@ for (const { path, h1 } of pages) {
         'content',
         /Seloria/
       );
-    });
-
-    test('shows the contact email', async ({ page }) => {
-      await page.goto(path);
       await expect(
         page.getByRole('link', { name: seloriaEmail }).first()
       ).toHaveAttribute('href', `mailto:${seloriaEmail}`);
-    });
-
-    test('is listed in the sitemap', async ({ request }) => {
-      const body = await (await request.get('/sitemap.xml')).text();
-      expect(body).toContain(`<loc>https://imaugust.com${path}</loc>`);
     });
   });
 }

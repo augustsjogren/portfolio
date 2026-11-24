@@ -17,40 +17,21 @@ test.describe('Projects page', () => {
     expect(getErrors()).toHaveLength(0);
   });
 
-  test('Seloria card links internally', async ({ page }) => {
+  test('cards link to Seloria internally and chef externally', async ({
+    page,
+  }) => {
     await page.goto('/projects');
-    const card = page.getByRole('link', { name: /seloria/i });
-    await expect(card).toHaveAttribute('href', '/seloria');
-    await expect(card).not.toHaveAttribute('target', '_blank');
-  });
 
-  test('chef card links externally to GitHub', async ({ page }) => {
-    await page.goto('/projects');
-    const card = page.getByRole('link', { name: /chef/i });
-    await expect(card).toHaveAttribute(
+    const seloria = page.getByRole('link', { name: /seloria/i });
+    await expect(seloria).toHaveAttribute('href', '/seloria');
+    await expect(seloria).not.toHaveAttribute('target', '_blank');
+
+    const chef = page.getByRole('link', { name: /chef/i });
+    await expect(chef).toHaveAttribute(
       'href',
       'https://github.com/augustsjogren/chef'
     );
-    await expect(card).toHaveAttribute('target', '_blank');
-    await expect(card).toHaveAttribute('rel', /noreferrer/);
-  });
-
-  test('sets description and canonical', async ({ page }) => {
-    await page.goto('/projects');
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
-      'href',
-      'https://imaugust.com/projects'
-    );
-    await expect(page.locator('meta[name="description"]')).toHaveAttribute(
-      'content',
-      /Seloria/
-    );
-  });
-
-  test('nav Projects tab is active on the page', async ({ page }) => {
-    await page.goto('/projects');
-    await expect(
-      page.getByRole('banner').getByRole('link', { name: 'Projects', exact: true })
-    ).toBeVisible();
+    await expect(chef).toHaveAttribute('target', '_blank');
+    await expect(chef).toHaveAttribute('rel', /noreferrer/);
   });
 });
