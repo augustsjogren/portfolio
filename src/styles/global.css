@@ -23,6 +23,11 @@ body {
   margin: 0;
 }
 
+/* Reserve scrollbar space so short and long pages center identically */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background: var(--bg);
   color: var(--ink);
