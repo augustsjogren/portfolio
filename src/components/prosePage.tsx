@@ -22,7 +22,7 @@ export const ProsePage = ({
   updated,
   children,
 }: ProsePageProps) => (
-  <main className={styles.prose}>
+  <div className={styles.prose}>
     <title>{documentTitle}</title>
     <PageMeta description={description} canonical={canonical} />
 
@@ -33,5 +33,5 @@ export const ProsePage = ({
     {updated && <p className={styles.updated}>Last updated: {updated}</p>}
     {children}
     <PageFooter />
-  </main>
+  </div>
 );
