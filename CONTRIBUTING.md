@@ -86,7 +86,7 @@ npm run test:e2e:debug
 All tests are automatically run on:
 
 - Every pull request
-- Every push to main/master
+- Every push to main
 
 Tests must pass for PRs to be merged. Failing tests block deployment.
 
