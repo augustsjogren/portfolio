@@ -16,5 +16,9 @@ jobs:
   deploy:
     needs: [build]
     name: Deploy site
+    permissions:
+      contents: read
+      deployments: write
+      pull-requests: write
     uses: './.github/workflows/deploy.yml'
     secrets: inherit
