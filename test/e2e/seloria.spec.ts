@@ -102,4 +102,22 @@ test.describe('Seloria showcase page', () => {
     );
     expect(broken).toBe(0);
   });
+
+  test('gallery chevrons scroll the screenshots', async ({ page }) => {
+    await page.setViewportSize({ width: 800, height: 900 });
+    await page.goto('/seloria');
+    const prev = page.getByRole('button', { name: /previous screenshots/i });
+    const next = page.getByRole('button', { name: /next screenshots/i });
+    const list = page.locator('ul', {
+      has: page.getByRole('img', { name: /home screen/i }),
+    });
+
+    await expect(prev).toBeDisabled();
+    await expect(next).toBeEnabled();
+    await next.click();
+    await expect
+      .poll(() => list.evaluate((el) => el.scrollLeft))
+      .toBeGreaterThan(0);
+    await expect(prev).toBeEnabled();
+  });
 });

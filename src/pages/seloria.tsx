@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { PageMeta } from '../components/pageMeta';
+import { ScreenshotGallery } from '../components/screenshotGallery';
 import { PageFooter } from '../components/pageFooter';
 import { seloria, seloriaDownload } from '../seloriaContent';
 import { seloriaScreenshots } from '../seloriaScreenshots';
@@ -68,21 +69,7 @@ const SeloriaPage = () => (
         {seloria.screenshotsLabel}
       </h2>
       {seloriaScreenshots.length > 0 ? (
-        <ul className={styles.shots}>
-          {seloriaScreenshots.map((shot) => (
-            <li key={shot.src} className={styles['shot-item']}>
-              <img
-                className={styles.shot}
-                src={shot.src}
-                alt={shot.alt}
-                width={600}
-                height={1304}
-                loading='lazy'
-              />
-              <span className={styles['shot-caption']}>{shot.caption}</span>
-            </li>
-          ))}
-        </ul>
+        <ScreenshotGallery shots={seloriaScreenshots} />
       ) : (
         <p className={styles.placeholder}>{seloria.screenshotsPlaceholder}</p>
       )}

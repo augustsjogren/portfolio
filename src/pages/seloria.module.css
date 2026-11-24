@@ -94,6 +94,58 @@
   transform: rotate(3deg);
 }
 
+.gallery {
+  position: relative;
+}
+
+/* right-edge fade: hints at more content, hidden once scrolled to the end */
+.gallery::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -2rem;
+  bottom: 2.5rem;
+  width: 4rem;
+  background: linear-gradient(to right, transparent, var(--bg));
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.gallery[data-at-end='true']::after {
+  opacity: 0;
+}
+
+.gallery-controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin: -2.6rem 0 1rem;
+}
+
+.gallery-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.gallery-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.gallery-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
 .shots {
   list-style: none;
   margin: 0 -2rem;
