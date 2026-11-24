@@ -1,0 +1,63 @@
+.prose {
+  max-width: 68ch;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+  width: 100%;
+  color: var(--ink);
+}
+
+.back {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin: 0 0 2rem;
+}
+
+.back a,
+.prose a {
+  color: var(--accent);
+}
+
+.back a:hover,
+.prose a:hover {
+  color: var(--ink);
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  margin: 0 0 0.8rem;
+}
+
+.updated {
+  color: var(--muted);
+  margin: 0 0 2.5rem;
+}
+
+.prose h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 2.2rem 0 0.6rem;
+}
+
+.prose p,
+.prose li {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.prose p + p,
+.prose ul {
+  margin-top: 0.8rem;
+}
+
+.prose ul {
+  padding-left: 1.3rem;
+}
+
+.prose li + li {
+  margin-top: 0.4rem;
+}
