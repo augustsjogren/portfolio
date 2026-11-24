@@ -31,14 +31,27 @@ test.describe('Landing Page', () => {
     await expect(mpya).toHaveAttribute('href', 'https://www.mpyadigital.com');
   });
 
-  test('currently section links to the chef repo', async ({ page }) => {
+  test('currently section links internally to Seloria', async ({ page }) => {
     await page.goto('/');
-    const chef = page.getByRole('link', { name: 'chef' });
-    await expect(chef).toBeVisible();
-    await expect(chef).toHaveAttribute(
-      'href',
-      'https://github.com/augustsjogren/chef'
-    );
+    const seloria = page.getByRole('link', { name: 'Seloria' });
+    await expect(seloria).toBeVisible();
+    await expect(seloria).toHaveAttribute('href', '/seloria');
+    await expect(seloria).not.toHaveAttribute('target', '_blank');
+  });
+
+  test('currently section no longer links to the chef repo', async ({
+    page,
+  }) => {
+    await page.goto('/');
+    await expect(page.getByRole('link', { name: 'chef' })).toHaveCount(0);
+  });
+
+  test('home has a subtle link to the projects page', async ({ page }) => {
+    await page.goto('/');
+    const more = page.getByRole('link', { name: /see all projects/i });
+    await expect(more).toBeVisible();
+    await more.click();
+    await expect(page).toHaveURL('/projects');
   });
 
   test('find me section links to external profiles', async ({ page }) => {

@@ -28,6 +28,7 @@ export async function visitAllPages(page: Page): Promise<void> {
   const pages = [
     { url: '/', name: 'home' },
     { url: '/how-i-work', name: 'how I work' },
+    { url: '/projects', name: 'projects' },
     { url: '/contact', name: 'contact' },
   ];
 
