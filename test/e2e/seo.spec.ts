@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { contact, home, howIWork } from '../../src/content';
+import { contact, home, howIWork, projects } from '../../src/content';
 
 const BASE = 'https://imaugust.com';
 
@@ -55,7 +55,7 @@ test.describe('Static HTML head (what crawlers see before JS runs)', () => {
     expect(res.status()).toBe(200);
     const body = await res.text();
 
-    for (const path of ['/', '/how-i-work', '/contact']) {
+    for (const path of ['/', '/how-i-work', '/projects', '/contact']) {
       expect(body).toContain(`<loc>${BASE}${path}</loc>`);
     }
   });
@@ -74,6 +74,12 @@ test.describe('Rendered head (after JS runs)', () => {
       pageTitle: howIWork.pageTitle,
       description: howIWork.description,
       canonical: `${BASE}/how-i-work`,
+    },
+    {
+      path: '/projects',
+      pageTitle: projects.pageTitle,
+      description: projects.description,
+      canonical: `${BASE}/projects`,
     },
     {
       path: '/contact',

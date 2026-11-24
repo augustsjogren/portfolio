@@ -12,6 +12,7 @@ const HowIWorkPage = React.lazy(() => import('./pages/how-i-work'));
 const SeloriaPage = React.lazy(() => import('./pages/seloria'));
 const SeloriaPrivacyPage = React.lazy(() => import('./pages/seloria/privacy'));
 const SeloriaSupportPage = React.lazy(() => import('./pages/seloria/support'));
+const ProjectsPage = React.lazy(() => import('./pages/projects'));
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
     children: [
       { element: <IndexPage />, index: true },
       { path: 'how-i-work', element: <HowIWorkPage /> },
+      { path: 'projects', element: <ProjectsPage /> },
       { path: 'contact', element: <ContactPage /> },
       { path: 'seloria', element: <SeloriaPage /> },
       { path: 'seloria/privacy', element: <SeloriaPrivacyPage /> },

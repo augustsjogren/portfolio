@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import profileImage from '../images/Aggebagge_web.webp';
 import { home, links, site } from '../content';
 import { Heading } from '../components/heading';
@@ -55,14 +56,20 @@ const IndexPage = () => {
                 <b>{item.label}:</b>{' '}
                 {item.text.map((part) =>
                   part.href ? (
-                    <a
-                      key={part.text}
-                      href={part.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {part.text}
-                    </a>
+                    part.href.startsWith('/') ? (
+                      <Link key={part.text} to={part.href}>
+                        {part.text}
+                      </Link>
+                    ) : (
+                      <a
+                        key={part.text}
+                        href={part.href}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {part.text}
+                      </a>
+                    )
                   ) : (
                     <span key={part.text}>{part.text}</span>
                   ),
@@ -71,6 +78,9 @@ const IndexPage = () => {
             </li>
           ))}
         </ul>
+        <p className={styles['landing-more']}>
+          <Link to={home.projectsLink.href}>{home.projectsLink.text} →</Link>
+        </p>
       </section>
 
       <section className={styles['landing-section']}>

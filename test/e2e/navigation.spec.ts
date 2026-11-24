@@ -12,6 +12,23 @@ test.describe('Navigation', () => {
     await expect(page).toHaveURL('/how-i-work');
   });
 
+  test('should navigate to projects page', async ({ page }) => {
+    await page.goto('/');
+    await page
+      .getByRole('banner')
+      .getByRole('link', { name: 'Projects', exact: true })
+      .click();
+    await expect(page).toHaveURL('/projects');
+  });
+
+  test('navbar lists Projects between How I work and Contact', async ({
+    page,
+  }) => {
+    await page.goto('/');
+    const links = page.getByRole('banner').getByRole('link');
+    await expect(links).toHaveText(['Home', 'How I work', 'Projects', 'Contact']);
+  });
+
   test('should navigate to contact page', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('link', { name: /contact/i }).click();

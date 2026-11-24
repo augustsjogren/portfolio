@@ -144,6 +144,22 @@
   display: block;
 }
 
+.landing-more {
+  margin: 1.4rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.landing-more a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.landing-more a:hover {
+  color: var(--accent);
+}
+
 /* --- Link chips --- */
 
 .landing-link-row {

@@ -20,6 +20,7 @@ export const site = {
 export const nav = [
   { to: '/', label: 'Home' },
   { to: '/how-i-work', label: 'How I work' },
+  { to: '/projects', label: 'Projects' },
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -65,10 +66,8 @@ export const home = {
       label: 'For fun',
       text: [
         { text: 'Building ' },
-        { text: 'chef', href: 'https://github.com/augustsjogren/chef', external: true },
-        {
-          text: ', a Rust TUI that keeps agent skills synced between harnesses',
-        },
+        { text: 'Seloria', href: '/seloria' },
+        { text: ', a native iOS player for your own Navidrome server' },
       ],
     },
     {
@@ -82,6 +81,48 @@ export const home = {
       text: [{ text: 'music on vinyl and CD, and the gym when I can' }],
     },
   ] satisfies ListItem[],
+  projectsLink: { text: 'See all projects', href: '/projects' },
+};
+
+export type Project = {
+  name: string;
+  kind: string;
+  description: string;
+  href: string;
+  external?: boolean;
+  cta: string;
+};
+
+export const projects = {
+  title: 'Projects',
+  pageTitle: 'Projects – August Sjögren',
+  description:
+    'Projects by August Sjögren: Seloria, a native iOS music player for your own Navidrome or Subsonic server, and chef, a Rust TUI that keeps agent skills synced between harnesses.',
+  heading: [
+    { text: 'Things I ' },
+    { text: 'build', accent: true },
+    { text: ' for fun.' },
+  ] satisfies HeadingPart[],
+  lede: 'Side projects, built the way I like to work: small, sharp and shipped.',
+  items: [
+    {
+      name: 'Seloria',
+      kind: 'iOS app',
+      description:
+        'A native iOS music player for your own Navidrome or Subsonic server. Your library, your server, no subscription.',
+      href: '/seloria',
+      cta: 'Read more',
+    },
+    {
+      name: 'chef',
+      kind: 'Rust TUI',
+      description:
+        'A terminal app that keeps agent skills synced between harnesses, so every agent works from the same kitchen.',
+      href: 'https://github.com/augustsjogren/chef',
+      external: true,
+      cta: 'View on GitHub',
+    },
+  ] satisfies Project[],
 };
 
 export const howIWork = {
